@@ -156,6 +156,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               'Anuncios Distrital',
@@ -184,6 +185,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
@@ -227,7 +229,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       return Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                            MainAxisAlignment.start,
                                         children: [
                                           Padding(
                                             padding:
