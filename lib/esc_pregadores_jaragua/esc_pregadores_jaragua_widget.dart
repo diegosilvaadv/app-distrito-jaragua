@@ -206,39 +206,6 @@ class _EscPregadoresJaraguaWidgetState
                                                       ),
                                                 ),
                                               ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(25, 0, 0, 0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    FlutterFlowIconButton(
-                                                      borderColor:
-                                                          Colors.transparent,
-                                                      borderRadius: 30,
-                                                      borderWidth: 1,
-                                                      buttonSize: 60,
-                                                      icon: Icon(
-                                                        Icons.share,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .secondaryColor,
-                                                        size: 30,
-                                                      ),
-                                                      onPressed: () async {
-                                                        await Share.share(
-                                                            columnJaraguaPregadoresRecord
-                                                                .nome);
-                                                        await Share.share(
-                                                            columnJaraguaPregadoresRecord
-                                                                .igreja);
-                                                      },
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
                                             ],
                                           ),
                                           Row(
@@ -317,6 +284,30 @@ class _EscPregadoresJaraguaWidgetState
                               ],
                             ),
                           ),
+                        ),
+                        Wrap(
+                          spacing: 0,
+                          runSpacing: 0,
+                          alignment: WrapAlignment.start,
+                          crossAxisAlignment: WrapCrossAlignment.start,
+                          direction: Axis.horizontal,
+                          runAlignment: WrapAlignment.start,
+                          verticalDirection: VerticalDirection.down,
+                          clipBehavior: Clip.none,
+                          children: [
+                            InkWell(
+                              onTap: () async {
+                                await Share.share(
+                                    columnJaraguaPregadoresRecord.nome);
+                              },
+                              child: Icon(
+                                Icons.share,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                size: 24,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     );
