@@ -148,80 +148,83 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               onTap: () => FocusScope.of(context).unfocus(),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 5),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                      child: Row(
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              'Anuncios Distrital',
+                              style:
+                                  FlutterFlowTheme.of(context).title2.override(
+                                        fontFamily: 'Advent Sanslogo',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        useGoogleFonts: false,
+                                      ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Icon(
+                                Icons.chevron_right,
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                size: 24,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Text(
-                            'Anuncios Distrital',
-                            style: FlutterFlowTheme.of(context).title2.override(
-                                  fontFamily: 'Advent Sanslogo',
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  useGoogleFonts: false,
-                                ),
-                          ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                            child: Icon(
-                              Icons.chevron_right,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 24,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.95,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: StreamBuilder<List<AnunciosDistritalRecord>>(
-                              stream: queryAnunciosDistritalRecord(),
-                              builder: (context, snapshot) {
-                                // Customize what your widget looks like when it's loading.
-                                if (!snapshot.hasData) {
-                                  return Center(
-                                    child: SizedBox(
-                                      width: 50,
-                                      height: 50,
-                                      child: CircularProgressIndicator(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
+                                EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.95,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              child:
+                                  StreamBuilder<List<AnunciosDistritalRecord>>(
+                                stream: queryAnunciosDistritalRecord(),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50,
+                                        height: 50,
+                                        child: CircularProgressIndicator(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                        ),
                                       ),
-                                    ),
-                                  );
-                                }
-                                List<AnunciosDistritalRecord>
-                                    listViewAnunciosDistritalRecordList =
-                                    snapshot.data;
-                                return ListView.builder(
-                                  padding: EdgeInsets.zero,
-                                  scrollDirection: Axis.horizontal,
-                                  itemCount: listViewAnunciosDistritalRecordList
-                                      .length,
-                                  itemBuilder: (context, listViewIndex) {
-                                    final listViewAnunciosDistritalRecord =
-                                        listViewAnunciosDistritalRecordList[
-                                            listViewIndex];
-                                    return SingleChildScrollView(
-                                      child: Column(
+                                    );
+                                  }
+                                  List<AnunciosDistritalRecord>
+                                      listViewAnunciosDistritalRecordList =
+                                      snapshot.data;
+                                  return ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount:
+                                        listViewAnunciosDistritalRecordList
+                                            .length,
+                                    itemBuilder: (context, listViewIndex) {
+                                      final listViewAnunciosDistritalRecord =
+                                          listViewAnunciosDistritalRecordList[
+                                              listViewIndex];
+                                      return Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
@@ -390,34 +393,35 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             ),
                                           ),
                                         ],
-                                      ),
-                                    );
-                                  },
-                                );
-                              },
+                                      );
+                                    },
+                                  );
+                                },
+                              ),
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            'Jaraguá Anuncios',
-                            style: FlutterFlowTheme.of(context).title2.override(
-                                  fontFamily: 'Advent Sanslogo',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  useGoogleFonts: false,
-                                ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              'Jaraguá Anuncios',
+                              style:
+                                  FlutterFlowTheme.of(context).title2.override(
+                                        fontFamily: 'Advent Sanslogo',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        useGoogleFonts: false,
+                                      ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
