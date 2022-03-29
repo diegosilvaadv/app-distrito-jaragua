@@ -167,7 +167,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           width: MediaQuery.of(context).size.width * 0.95,
                           height: 250,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: FlutterFlowTheme.of(context).alternate,
                           ),
                           child: StreamBuilder<List<AnunciosDistritalRecord>>(
                             stream: queryAnunciosDistritalRecord(),
@@ -265,13 +265,47 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
-                                                children: [],
+                                                children: [
+                                                  Text(
+                                                    dateTimeFormat(
+                                                        'd/M h:mm a',
+                                                        listViewAnunciosDistritalRecord
+                                                            .data),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ],
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
-                                                children: [],
+                                                children: [
+                                                  Text(
+                                                    listViewAnunciosDistritalRecord
+                                                        .local,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ],
                                               ),
                                             ],
                                           ),
