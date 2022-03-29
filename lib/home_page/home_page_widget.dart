@@ -190,6 +190,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   snapshot.data;
                               return ListView.builder(
                                 padding: EdgeInsets.zero,
+                                shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
                                 itemCount:
                                     listViewAnunciosDistritalRecordList.length,
@@ -205,10 +206,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             5, 5, 5, 5),
                                         child: Container(
                                           width: 150,
-                                          height: 250,
+                                          height: 230,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
+                                                .primaryText,
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                           ),
@@ -244,7 +245,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primaryText,
+                                                              .primaryBackground,
                                                           useGoogleFonts: false,
                                                         ),
                                                   ),
