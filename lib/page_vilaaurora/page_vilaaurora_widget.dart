@@ -1,9 +1,11 @@
-import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
+import '../esc_pregadores_vilaauaroa/esc_pregadores_vilaauaroa_widget.dart';
+import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class PageVilaauroraWidget extends StatefulWidget {
   const PageVilaauroraWidget({Key key}) : super(key: key);
@@ -38,32 +40,60 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           child: Stack(
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  'assets/images/Escala_da_Igreja_Adventista_do_Vila_Aurora_-_Dist._Jaragu._(1).png',
-                                  width: 374,
-                                  height: 150,
-                                  fit: BoxFit.fitWidth,
+                              InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.fade,
+                                      child: FlutterFlowExpandedImageView(
+                                        image: Image.asset(
+                                          'assets/images/Escala_da_Igreja_Adventista_do_Vila_Aurora_-_Dist._Jaragu._(1).png',
+                                          fit: BoxFit.contain,
+                                        ),
+                                        allowRotation: false,
+                                        tag: 'imageTag',
+                                        useHeroAnimation: true,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Hero(
+                                  tag: 'imageTag',
+                                  transitionOnUserGestures: true,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image.asset(
+                                      'assets/images/Escala_da_Igreja_Adventista_do_Vila_Aurora_-_Dist._Jaragu._(1).png',
+                                      width: 374,
+                                      height: 150,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
                                 ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 10, 0, 0),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFEEEEEE),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5, 0, 0, 0),
-                                    child: Icon(
-                                      Icons.arrow_back_ios,
-                                      color: Colors.black,
-                                      size: 24,
+                                child: InkWell(
+                                  onTap: () async {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Icon(
+                                        Icons.arrow_back_ios,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -125,6 +155,7 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                       mainAxisSpacing: 10,
                       childAspectRatio: 1,
                     ),
+                    shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
                       InkWell(
@@ -133,7 +164,7 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
+                                  EscPregadoresVilaauaroaWidget(),
                             ),
                           );
                         },
@@ -193,212 +224,179 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                           ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            borderRadius: BorderRadius.circular(10),
-                            shape: BoxShape.rectangle,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.mouse,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        size: 60,
-                                      ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          AutoSizeText(
-                                            'Escala da\nSONOPLASTIA',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'OpensSans',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBackground,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          borderRadius: BorderRadius.circular(10),
+                          shape: BoxShape.rectangle,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.mouse,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      size: 60,
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 10, 0, 0),
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        AutoSizeText(
+                                          'Escala da\nSONOPLASTIA',
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'OpensSans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                useGoogleFonts: false,
+                                              ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            borderRadius: BorderRadius.circular(10),
-                            shape: BoxShape.rectangle,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.mic_external_on,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        size: 60,
-                                      ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          AutoSizeText(
-                                            'Escala da\nMUSICA',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'OpensSans',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBackground,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          borderRadius: BorderRadius.circular(10),
+                          shape: BoxShape.rectangle,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.mic_external_on,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      size: 60,
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 10, 0, 0),
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        AutoSizeText(
+                                          'Escala da\nMUSICA',
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'OpensSans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                useGoogleFonts: false,
+                                              ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            borderRadius: BorderRadius.circular(10),
-                            shape: BoxShape.rectangle,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.person_search_sharp,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        size: 60,
-                                      ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          AutoSizeText(
-                                            'Escala\nPASTORAL',
-                                            textAlign: TextAlign.center,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'OpensSans',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBackground,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          borderRadius: BorderRadius.circular(10),
+                          shape: BoxShape.rectangle,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.person_search_sharp,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      size: 60,
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 10, 0, 0),
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        AutoSizeText(
+                                          'Escala\nPASTORAL',
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'OpensSans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                useGoogleFonts: false,
+                                              ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -406,15 +404,6 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                     ],
                   ),
                 ),
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Hello World',
-                    style: FlutterFlowTheme.of(context).bodyText1,
-                  ),
-                ],
               ),
             ],
           ),

@@ -18,13 +18,13 @@ abstract class AuroraPregadoresRecord
   DateTime get data;
 
   @nullable
-  String get img;
-
-  @nullable
   String get igreja;
 
   @nullable
   String get whatsapp;
+
+  @nullable
+  String get img;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -33,9 +33,9 @@ abstract class AuroraPregadoresRecord
   static void _initializeBuilder(AuroraPregadoresRecordBuilder builder) =>
       builder
         ..nome = ''
-        ..img = ''
         ..igreja = ''
-        ..whatsapp = '';
+        ..whatsapp = ''
+        ..img = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('aurora_pregadores');
@@ -63,15 +63,15 @@ abstract class AuroraPregadoresRecord
 Map<String, dynamic> createAuroraPregadoresRecordData({
   String nome,
   DateTime data,
-  String img,
   String igreja,
   String whatsapp,
+  String img,
 }) =>
     serializers.toFirestore(
         AuroraPregadoresRecord.serializer,
         AuroraPregadoresRecord((a) => a
           ..nome = nome
           ..data = data
-          ..img = img
           ..igreja = igreja
-          ..whatsapp = whatsapp));
+          ..whatsapp = whatsapp
+          ..img = img));

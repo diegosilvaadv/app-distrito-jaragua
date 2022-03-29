@@ -100,7 +100,7 @@ class _EscPregadoresJaraguaWidgetState
                                       child: Image.network(
                                         valueOrDefault<String>(
                                           columnJaraguaPregadoresRecord.img,
-                                          'https://cdn-icons.flaticon.com/png/512/3220/premium/3220404.png?token=exp=1648579243~hmac=500467bd6d4c89dfe55bf383bd0bf123',
+                                          'https://i.ibb.co/cC6RmGZ/businessman.png',
                                         ),
                                         width: 100,
                                         height: 100,

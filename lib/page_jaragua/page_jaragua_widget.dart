@@ -75,20 +75,25 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 10, 0, 0),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFEEEEEE),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5, 0, 0, 0),
-                                    child: Icon(
-                                      Icons.arrow_back_ios,
-                                      color: Colors.black,
-                                      size: 24,
+                                child: InkWell(
+                                  onTap: () async {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Icon(
+                                        Icons.arrow_back_ios,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -150,6 +155,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                       mainAxisSpacing: 10,
                       childAspectRatio: 1,
                     ),
+                    primary: false,
                     scrollDirection: Axis.vertical,
                     children: [
                       InkWell(
@@ -431,15 +437,6 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                     ],
                   ),
                 ),
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Hello World',
-                    style: FlutterFlowTheme.of(context).bodyText1,
-                  ),
-                ],
               ),
             ],
           ),

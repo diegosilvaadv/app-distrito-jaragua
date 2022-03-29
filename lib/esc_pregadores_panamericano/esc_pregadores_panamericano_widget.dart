@@ -2,6 +2,7 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,7 +32,7 @@ class _EscPregadoresPanamericanoWidgetState
           buttonSize: 70,
           icon: Icon(
             Icons.chevron_left,
-            color: FlutterFlowTheme.of(context).alternate,
+            color: FlutterFlowTheme.of(context).secondaryColor,
             size: 40,
           ),
           onPressed: () async {
@@ -42,7 +43,7 @@ class _EscPregadoresPanamericanoWidgetState
           'ESC DE PREGADORES',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Advent Sanslogo',
-                color: FlutterFlowTheme.of(context).primaryBackground,
+                color: Colors.white,
                 useGoogleFonts: false,
               ),
         ),
@@ -87,215 +88,234 @@ class _EscPregadoresPanamericanoWidgetState
                           child: Card(
                             clipBehavior: Clip.antiAliasWithSaveLayer,
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Image.network(
-                                      'https://picsum.photos/seed/418/600',
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          5, 0, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'NOME: ',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                              ),
-                                              Text(
-                                                valueOrDefault<String>(
-                                                  columnPanamericanoPregadoresRecord
-                                                      .nome,
-                                                  'S/ Nome',
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                              ),
-                                            ],
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5, 5, 5, 5),
+                                          child: Image.network(
+                                            valueOrDefault<String>(
+                                              columnPanamericanoPregadoresRecord
+                                                  .img,
+                                              'https://i.ibb.co/cC6RmGZ/businessman.png',
+                                            ),
+                                            width: 100,
+                                            height: 100,
+                                            fit: BoxFit.cover,
                                           ),
-                                          Row(
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5, 0, 0, 0),
+                                          child: Column(
                                             mainAxisSize: MainAxisSize.max,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
-                                              Text(
-                                                'DATA: ',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    'NOME: ',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
-                                              ),
-                                              Text(
-                                                valueOrDefault<String>(
-                                                  dateTimeFormat(
-                                                      'd/M/y',
-                                                      columnPanamericanoPregadoresRecord
-                                                          .data),
-                                                  'S/ Data',
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(10, 0, 0, 0),
-                                                child: Text(
-                                                  valueOrDefault<String>(
-                                                    dateTimeFormat(
-                                                        'EEEE',
-                                                        columnPanamericanoPregadoresRecord
-                                                            .data),
-                                                    'S/ Dia',
                                                   ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'OpensSans',
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        useGoogleFonts: false,
+                                                  Text(
+                                                    valueOrDefault<String>(
+                                                      columnPanamericanoPregadoresRecord
+                                                          .nome,
+                                                      'S/ Nome',
+                                                    ).maybeHandleOverflow(
+                                                      maxChars: 30,
+                                                      replacement: '…',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color:
+                                                              Color(0xFFDBDBDB),
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    'DATA: ',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color: Colors.white,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    valueOrDefault<String>(
+                                                      dateTimeFormat(
+                                                          'd/M/y',
+                                                          columnPanamericanoPregadoresRecord
+                                                              .data),
+                                                      'S/ Data',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color:
+                                                              Color(0xFFDBDBDB),
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                10, 0, 0, 0),
+                                                    child: Text(
+                                                      valueOrDefault<String>(
+                                                        dateTimeFormat(
+                                                            'EEEE',
+                                                            columnPanamericanoPregadoresRecord
+                                                                .data),
+                                                        'S/ Dia',
                                                       ),
-                                                ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'OpensSans',
+                                                                color: Color(
+                                                                    0xFFF9F9F9),
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'WhatsApp: ',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    'WhatsApp: ',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
-                                              ),
-                                              Text(
-                                                valueOrDefault<String>(
-                                                  columnPanamericanoPregadoresRecord
-                                                      .whatsapp,
-                                                  'S/ Whats',
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
+                                                  ),
+                                                  AutoSizeText(
+                                                    valueOrDefault<String>(
+                                                      columnPanamericanoPregadoresRecord
+                                                          .whatsapp,
+                                                      'S/ Whats',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color:
+                                                              Color(0xFFD4D4D4),
                                                           fontWeight:
                                                               FontWeight.normal,
                                                           useGoogleFonts: false,
                                                         ),
+                                                  ),
+                                                ],
                                               ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Igreja: ',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    'Igreja: ',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
-                                              ),
-                                              Text(
-                                                valueOrDefault<String>(
-                                                  columnPanamericanoPregadoresRecord
-                                                      .igreja,
-                                                  'S/ Igreja',
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
+                                                  ),
+                                                  Text(
+                                                    valueOrDefault<String>(
+                                                      columnPanamericanoPregadoresRecord
+                                                          .igreja,
+                                                      'S/ Igreja',
+                                                    ).maybeHandleOverflow(
+                                                      maxChars: 30,
+                                                      replacement: '…',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
                                                         .bodyText1
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color:
+                                                              Color(0xFFDBDBDB),
                                                           fontWeight:
                                                               FontWeight.normal,
                                                           useGoogleFonts: false,
                                                         ),
+                                                  ),
+                                                ],
                                               ),
                                             ],
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                ),
-                              ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

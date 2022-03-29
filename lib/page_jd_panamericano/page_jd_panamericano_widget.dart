@@ -1,9 +1,11 @@
-import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
+import '../esc_pregadores_panamericano/esc_pregadores_panamericano_widget.dart';
+import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class PageJdPanamericanoWidget extends StatefulWidget {
   const PageJdPanamericanoWidget({Key key}) : super(key: key);
@@ -26,6 +28,7 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Column(
                 mainAxisSize: MainAxisSize.max,
@@ -39,32 +42,60 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           child: Stack(
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  'assets/images/panamericano.PNG',
-                                  width: 374,
-                                  height: 150,
-                                  fit: BoxFit.fitWidth,
+                              InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.fade,
+                                      child: FlutterFlowExpandedImageView(
+                                        image: Image.asset(
+                                          'assets/images/panamericano.PNG',
+                                          fit: BoxFit.contain,
+                                        ),
+                                        allowRotation: false,
+                                        tag: 'imageTag',
+                                        useHeroAnimation: true,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Hero(
+                                  tag: 'imageTag',
+                                  transitionOnUserGestures: true,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image.asset(
+                                      'assets/images/panamericano.PNG',
+                                      width: 374,
+                                      height: 150,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
                                 ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 10, 0, 0),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFEEEEEE),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5, 0, 0, 0),
-                                    child: Icon(
-                                      Icons.arrow_back_ios,
-                                      color: Colors.black,
-                                      size: 24,
+                                child: InkWell(
+                                  onTap: () async {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 0, 0, 0),
+                                      child: Icon(
+                                        Icons.arrow_back_ios,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -116,94 +147,88 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                 ],
               ),
               Expanded(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 5),
-                  child: GridView(
-                    padding: EdgeInsets.zero,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      childAspectRatio: 1,
-                    ),
-                    scrollDirection: Axis.vertical,
-                    children: [
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
+                child: Align(
+                  alignment: AlignmentDirectional(0, 0),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 5),
+                    child: GridView(
+                      padding: EdgeInsets.zero,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        childAspectRatio: 1,
+                      ),
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    EscPregadoresPanamericanoWidget(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              borderRadius: BorderRadius.circular(10),
+                              shape: BoxShape.rectangle,
                             ),
-                          );
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            borderRadius: BorderRadius.circular(10),
-                            shape: BoxShape.rectangle,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.people_sharp,
-                                        color: Colors.black,
-                                        size: 70,
-                                      ),
-                                    ],
-                                  ),
-                                  SingleChildScrollView(
-                                    scrollDirection: Axis.horizontal,
-                                    child: Row(
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        AutoSizeText(
-                                          'Escala de \nPREGADORES',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'OpensSans',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                useGoogleFonts: false,
-                                              ),
+                                        Icon(
+                                          Icons.people_sharp,
+                                          color: Colors.black,
+                                          size: 70,
                                         ),
                                       ],
                                     ),
-                                  ),
-                                ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          AutoSizeText(
+                                            'Escala de \nPREGADORES',
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'OpensSans',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryBackground,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
+                        Container(
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(
@@ -261,18 +286,7 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                             ),
                           ),
                         ),
-                      ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
+                        Container(
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(
@@ -330,18 +344,7 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                             ),
                           ),
                         ),
-                      ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
-                        },
-                        child: Container(
+                        Container(
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(
@@ -399,19 +402,10 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Hello World',
-                    style: FlutterFlowTheme.of(context).bodyText1,
-                  ),
-                ],
               ),
             ],
           ),

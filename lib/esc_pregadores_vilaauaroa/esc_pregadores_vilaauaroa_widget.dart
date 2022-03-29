@@ -6,16 +6,16 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EscPregadoresIpanemaWidget extends StatefulWidget {
-  const EscPregadoresIpanemaWidget({Key key}) : super(key: key);
+class EscPregadoresVilaauaroaWidget extends StatefulWidget {
+  const EscPregadoresVilaauaroaWidget({Key key}) : super(key: key);
 
   @override
-  _EscPregadoresIpanemaWidgetState createState() =>
-      _EscPregadoresIpanemaWidgetState();
+  _EscPregadoresVilaauaroaWidgetState createState() =>
+      _EscPregadoresVilaauaroaWidgetState();
 }
 
-class _EscPregadoresIpanemaWidgetState
-    extends State<EscPregadoresIpanemaWidget> {
+class _EscPregadoresVilaauaroaWidgetState
+    extends State<EscPregadoresVilaauaroaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -31,7 +31,7 @@ class _EscPregadoresIpanemaWidgetState
           borderWidth: 1,
           buttonSize: 70,
           icon: Icon(
-            Icons.chevron_left_sharp,
+            Icons.chevron_left,
             color: FlutterFlowTheme.of(context).secondaryColor,
             size: 40,
           ),
@@ -57,8 +57,8 @@ class _EscPregadoresIpanemaWidgetState
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-            child: StreamBuilder<List<IpanemaPregadoresRecord>>(
-              stream: queryIpanemaPregadoresRecord(),
+            child: StreamBuilder<List<AuroraPregadoresRecord>>(
+              stream: queryAuroraPregadoresRecord(),
               builder: (context, snapshot) {
                 // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
@@ -72,14 +72,14 @@ class _EscPregadoresIpanemaWidgetState
                     ),
                   );
                 }
-                List<IpanemaPregadoresRecord>
-                    columnIpanemaPregadoresRecordList = snapshot.data;
+                List<AuroraPregadoresRecord> columnAuroraPregadoresRecordList =
+                    snapshot.data;
                 return Column(
                   mainAxisSize: MainAxisSize.max,
                   children: List.generate(
-                      columnIpanemaPregadoresRecordList.length, (columnIndex) {
-                    final columnIpanemaPregadoresRecord =
-                        columnIpanemaPregadoresRecordList[columnIndex];
+                      columnAuroraPregadoresRecordList.length, (columnIndex) {
+                    final columnAuroraPregadoresRecord =
+                        columnAuroraPregadoresRecordList[columnIndex];
                     return Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -97,7 +97,9 @@ class _EscPregadoresIpanemaWidgetState
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Padding(
                                           padding:
@@ -105,7 +107,7 @@ class _EscPregadoresIpanemaWidgetState
                                                   5, 5, 5, 5),
                                           child: Image.network(
                                             valueOrDefault<String>(
-                                              columnIpanemaPregadoresRecord.img,
+                                              columnAuroraPregadoresRecord.img,
                                               'https://i.ibb.co/cC6RmGZ/businessman.png',
                                             ),
                                             width: 100,
@@ -139,7 +141,7 @@ class _EscPregadoresIpanemaWidgetState
                                                   ),
                                                   Text(
                                                     valueOrDefault<String>(
-                                                      columnIpanemaPregadoresRecord
+                                                      columnAuroraPregadoresRecord
                                                           .nome,
                                                       'S/ Nome',
                                                     ).maybeHandleOverflow(
@@ -180,7 +182,7 @@ class _EscPregadoresIpanemaWidgetState
                                                     valueOrDefault<String>(
                                                       dateTimeFormat(
                                                           'd/M/y',
-                                                          columnIpanemaPregadoresRecord
+                                                          columnAuroraPregadoresRecord
                                                               .data),
                                                       'S/ Data',
                                                     ),
@@ -206,7 +208,7 @@ class _EscPregadoresIpanemaWidgetState
                                                       valueOrDefault<String>(
                                                         dateTimeFormat(
                                                             'EEEE',
-                                                            columnIpanemaPregadoresRecord
+                                                            columnAuroraPregadoresRecord
                                                                 .data),
                                                         'S/ Dia',
                                                       ),
@@ -246,7 +248,7 @@ class _EscPregadoresIpanemaWidgetState
                                                   ),
                                                   AutoSizeText(
                                                     valueOrDefault<String>(
-                                                      columnIpanemaPregadoresRecord
+                                                      columnAuroraPregadoresRecord
                                                           .whatsapp,
                                                       'S/ Whats',
                                                     ),
@@ -282,7 +284,7 @@ class _EscPregadoresIpanemaWidgetState
                                                   ),
                                                   Text(
                                                     valueOrDefault<String>(
-                                                      columnIpanemaPregadoresRecord
+                                                      columnAuroraPregadoresRecord
                                                           .igreja,
                                                       'S/ Igreja',
                                                     ).maybeHandleOverflow(

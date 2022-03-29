@@ -20,13 +20,13 @@ abstract class PanamericanoPregadoresRecord
   DateTime get data;
 
   @nullable
-  String get img;
-
-  @nullable
   String get igreja;
 
   @nullable
   String get whatsapp;
+
+  @nullable
+  String get img;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -35,9 +35,9 @@ abstract class PanamericanoPregadoresRecord
   static void _initializeBuilder(PanamericanoPregadoresRecordBuilder builder) =>
       builder
         ..nome = ''
-        ..img = ''
         ..igreja = ''
-        ..whatsapp = '';
+        ..whatsapp = ''
+        ..img = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('panamericano_pregadores');
@@ -66,15 +66,15 @@ abstract class PanamericanoPregadoresRecord
 Map<String, dynamic> createPanamericanoPregadoresRecordData({
   String nome,
   DateTime data,
-  String img,
   String igreja,
   String whatsapp,
+  String img,
 }) =>
     serializers.toFirestore(
         PanamericanoPregadoresRecord.serializer,
         PanamericanoPregadoresRecord((p) => p
           ..nome = nome
           ..data = data
-          ..img = img
           ..igreja = igreja
-          ..whatsapp = whatsapp));
+          ..whatsapp = whatsapp
+          ..img = img));
