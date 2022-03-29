@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:share_plus/share_plus.dart';
 
 class EscPregadoresJaraguaWidget extends StatefulWidget {
   const EscPregadoresJaraguaWidget({Key key}) : super(key: key);
@@ -31,18 +32,18 @@ class _EscPregadoresJaraguaWidgetState
           buttonSize: 70,
           icon: Icon(
             Icons.chevron_left,
-            color: FlutterFlowTheme.of(context).alternate,
+            color: FlutterFlowTheme.of(context).secondaryColor,
             size: 40,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            Navigator.pop(context);
           },
         ),
         title: Text(
           'ESC DE PREGADORES',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Advent Sanslogo',
-                color: FlutterFlowTheme.of(context).primaryBackground,
+                color: Colors.white,
                 useGoogleFonts: false,
               ),
         ),
@@ -92,11 +93,18 @@ class _EscPregadoresJaraguaWidgetState
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Image.network(
-                                      'https://picsum.photos/seed/418/600',
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 5, 5, 5),
+                                      child: Image.network(
+                                        valueOrDefault<String>(
+                                          columnJaraguaPregadoresRecord.img,
+                                          'https://cdn-icons.flaticon.com/png/512/3220/premium/3220404.png?token=exp=1648579243~hmac=500467bd6d4c89dfe55bf383bd0bf123',
+                                        ),
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -117,9 +125,7 @@ class _EscPregadoresJaraguaWidgetState
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
                                               ),
@@ -129,19 +135,16 @@ class _EscPregadoresJaraguaWidgetState
                                                       .nome,
                                                   'S/ Nome',
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'OpensSans',
+                                                      color: Color(0xFFDBDBDB),
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      useGoogleFonts: false,
+                                                    ),
                                               ),
                                             ],
                                           ),
@@ -156,9 +159,7 @@ class _EscPregadoresJaraguaWidgetState
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
                                               ),
@@ -170,19 +171,16 @@ class _EscPregadoresJaraguaWidgetState
                                                           .data),
                                                   'S/ Data',
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'OpensSans',
+                                                      color: Color(0xFFDBDBDB),
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      useGoogleFonts: false,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
@@ -200,13 +198,45 @@ class _EscPregadoresJaraguaWidgetState
                                                       .bodyText1
                                                       .override(
                                                         fontFamily: 'OpensSans',
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            Color(0xFFF9F9F9),
                                                         fontWeight:
                                                             FontWeight.normal,
                                                         useGoogleFonts: false,
                                                       ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(25, 0, 0, 0),
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    FlutterFlowIconButton(
+                                                      borderColor:
+                                                          Colors.transparent,
+                                                      borderRadius: 30,
+                                                      borderWidth: 1,
+                                                      buttonSize: 60,
+                                                      icon: Icon(
+                                                        Icons.share,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryColor,
+                                                        size: 30,
+                                                      ),
+                                                      onPressed: () async {
+                                                        await Share.share(
+                                                            columnJaraguaPregadoresRecord
+                                                                .nome);
+                                                        await Share.share(
+                                                            columnJaraguaPregadoresRecord
+                                                                .igreja);
+                                                      },
+                                                    ),
+                                                  ],
                                                 ),
                                               ),
                                             ],
@@ -222,9 +252,7 @@ class _EscPregadoresJaraguaWidgetState
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
                                               ),
@@ -234,19 +262,16 @@ class _EscPregadoresJaraguaWidgetState
                                                       .whatsapp,
                                                   'S/ Whats',
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'OpensSans',
+                                                      color: Color(0xFFD4D4D4),
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      useGoogleFonts: false,
+                                                    ),
                                               ),
                                             ],
                                           ),
@@ -261,9 +286,7 @@ class _EscPregadoresJaraguaWidgetState
                                                         .override(
                                                           fontFamily:
                                                               'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
+                                                          color: Colors.white,
                                                           useGoogleFonts: false,
                                                         ),
                                               ),
@@ -273,19 +296,16 @@ class _EscPregadoresJaraguaWidgetState
                                                       .igreja,
                                                   'S/ Igreja',
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'OpensSans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'OpensSans',
+                                                      color: Color(0xFFDBDBDB),
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      useGoogleFonts: false,
+                                                    ),
                                               ),
                                             ],
                                           ),

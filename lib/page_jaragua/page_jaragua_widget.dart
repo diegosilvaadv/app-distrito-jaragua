@@ -185,7 +185,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                         Icons.people_sharp,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        size: 70,
+                                        size: 50,
                                       ),
                                     ],
                                   ),
@@ -251,7 +251,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                         Icons.mouse,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        size: 60,
+                                        size: 50,
                                       ),
                                     ],
                                   ),
@@ -321,7 +321,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                         Icons.mic_external_on,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        size: 60,
+                                        size: 50,
                                       ),
                                     ],
                                   ),
@@ -391,7 +391,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                         Icons.person_search_sharp,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        size: 60,
+                                        size: 50,
                                       ),
                                     ],
                                   ),
