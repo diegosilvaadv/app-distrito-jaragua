@@ -170,7 +170,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             color: Color(0xFFEEEEEE),
                           ),
                           child: StreamBuilder<List<AnunciosDistritalRecord>>(
-                            stream: queryAnunciosDistritalRecord(),
+                            stream: queryAnunciosDistritalRecord(
+                              queryBuilder: (anunciosDistritalRecord) =>
+                                  anunciosDistritalRecord.orderBy('data'),
+                            ),
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
                               if (!snapshot.hasData) {
@@ -215,9 +218,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           ),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Image.network(
                                                     valueOrDefault<String>(
@@ -233,10 +240,70 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     listViewAnunciosDistritalRecord
-                                                        .nome,
+                                                        .nome
+                                                        .maybeHandleOverflow(
+                                                      maxChars: 15,
+                                                      replacement: '…',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    dateTimeFormat(
+                                                            'd/M h:mm a',
+                                                            listViewAnunciosDistritalRecord
+                                                                .data)
+                                                        .maybeHandleOverflow(
+                                                      maxChars: 15,
+                                                      replacement: '…',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    listViewAnunciosDistritalRecord
+                                                        .local
+                                                        .maybeHandleOverflow(
+                                                      maxChars: 15,
+                                                      replacement: '…',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyText1
