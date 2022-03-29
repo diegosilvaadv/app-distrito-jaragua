@@ -154,7 +154,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   size: 24,
                 ),
                 Text(
-                  'Home',
+                  ' Home',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 0
@@ -178,7 +178,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   size: 24,
                 ),
                 Text(
-                  'Igrejas',
+                  '  Igrejas',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 1
