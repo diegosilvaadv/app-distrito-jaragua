@@ -222,24 +222,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Image.network(
-                                                        valueOrDefault<String>(
-                                                          listViewAnunciosDistritalRecord
-                                                              .img,
-                                                          'https://i.ibb.co/cC6RmGZ/businessman.png',
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                5, 5, 5, 3),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Image.network(
+                                                          valueOrDefault<
+                                                              String>(
+                                                            listViewAnunciosDistritalRecord
+                                                                .img,
+                                                            'https://i.ibb.co/cC6RmGZ/businessman.png',
+                                                          ),
+                                                          width: 140,
+                                                          height: 140,
+                                                          fit: BoxFit.cover,
                                                         ),
-                                                        width: 150,
-                                                        height: 150,
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ],
+                                                      ],
+                                                    ),
                                                   ),
                                                   SingleChildScrollView(
                                                     scrollDirection:
@@ -317,7 +324,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       children: [
                                                         Text(
                                                           listViewAnunciosDistritalRecord
-                                                              .local,
+                                                              .local
+                                                              .maybeHandleOverflow(
+                                                                  maxChars: 15),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyText1
