@@ -611,6 +611,48 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ],
                   ),
                 ),
+                if ((columnUsersRecord.admView) == true)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 20),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () async {
+                            await signOut();
+                            await Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LoginpageWidget(),
+                              ),
+                              (r) => false,
+                            );
+                          },
+                          text: 'Administradores',
+                          options: FFButtonOptions(
+                            width: 150,
+                            height: 40,
+                            color: Color(0xFFE10D0D),
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyText2.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
               ],
             ),
           );
