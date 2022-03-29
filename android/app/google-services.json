@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "322146099602",
+    "project_id": "iasd-vila-aurora-7",
+    "storage_bucket": "iasd-vila-aurora-7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322146099602:android:8c36cc04f1f1307aa8e14b",
+        "android_client_info": {
+          "package_name": "com.adv7dev.iasdvilaaurora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322146099602-mc3hbtcblb61op1nt7tetadnsr8psigl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adv7dev.iasdvilaaurora",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "322146099602-1fdptgidr3tr0f7j30bmdsmeb533o8dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpc1zdDcMglwhsQCVZCYlglMmAAtPqaW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322146099602-1fdptgidr3tr0f7j30bmdsmeb533o8dl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "322146099602-1m1uo2d5hd9hftiqtr78qhtekca6gthf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.adv7dev.iasdvilaaurora"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322146099602:android:b060b7bc8bc1607ba8e14b",
+        "android_client_info": {
+          "package_name": "com.flutterscreens.appdistritojaragua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322146099602-gels7fjoaoheov06ph1nfqhu1613pk4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterscreens.appdistritojaragua",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "322146099602-1fdptgidr3tr0f7j30bmdsmeb533o8dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpc1zdDcMglwhsQCVZCYlglMmAAtPqaW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322146099602-1fdptgidr3tr0f7j30bmdsmeb533o8dl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "322146099602-1m1uo2d5hd9hftiqtr78qhtekca6gthf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.adv7dev.iasdvilaaurora"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
