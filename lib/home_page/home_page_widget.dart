@@ -185,8 +185,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 0.95,
                               height: 250,
