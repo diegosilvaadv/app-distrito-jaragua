@@ -1,9 +1,11 @@
 import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
+import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class PageJaraguaWidget extends StatefulWidget {
   const PageJaraguaWidget({Key key}) : super(key: key);
@@ -38,13 +40,36 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           child: Stack(
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  'assets/images/Design_sem_nome_(2).png',
-                                  width: 374,
-                                  height: 150,
-                                  fit: BoxFit.fitWidth,
+                              InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.fade,
+                                      child: FlutterFlowExpandedImageView(
+                                        image: Image.asset(
+                                          'assets/images/Design_sem_nome_(2).png',
+                                          fit: BoxFit.contain,
+                                        ),
+                                        allowRotation: false,
+                                        tag: 'imageTag',
+                                        useHeroAnimation: true,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Hero(
+                                  tag: 'imageTag',
+                                  transitionOnUserGestures: true,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image.asset(
+                                      'assets/images/Design_sem_nome_(2).png',
+                                      width: 374,
+                                      height: 150,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -158,7 +183,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                     children: [
                                       Icon(
                                         Icons.people_sharp,
-                                        color: Colors.black,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                         size: 70,
                                       ),
                                     ],
@@ -223,7 +249,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                     children: [
                                       Icon(
                                         Icons.mouse,
-                                        color: Colors.black,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                         size: 60,
                                       ),
                                     ],
@@ -292,7 +319,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                     children: [
                                       Icon(
                                         Icons.mic_external_on,
-                                        color: Colors.black,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                         size: 60,
                                       ),
                                     ],
@@ -361,7 +389,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                     children: [
                                       Icon(
                                         Icons.person_search_sharp,
-                                        color: Colors.black,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                         size: 60,
                                       ),
                                     ],

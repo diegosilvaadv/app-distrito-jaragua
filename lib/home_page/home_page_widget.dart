@@ -92,19 +92,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'DIST. JARAGUÁ',
-                      style: FlutterFlowTheme.of(context).title1.override(
-                            fontFamily: 'Advent Sanslogo',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            useGoogleFonts: false,
-                          ),
-                    ),
-                  ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'DIST. JARAGUÁ',
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Advent Sanslogo',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              fontSize: 27,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
