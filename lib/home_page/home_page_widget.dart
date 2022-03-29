@@ -174,7 +174,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                               child: Icon(
                                 Icons.chevron_right,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 size: 24,
                               ),
                             ),
@@ -182,7 +183,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                       ),
                       Row(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
@@ -232,7 +233,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     5, 5, 5, 5),
                                             child: Container(
                                               width: 160,
-                                              height: 240,
+                                              height: 220,
                                               decoration: BoxDecoration(
                                                 color:
                                                     FlutterFlowTheme.of(context)
