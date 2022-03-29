@@ -169,8 +169,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           decoration: BoxDecoration(
                             color: Color(0xFFEEEEEE),
                           ),
-                          child: StreamBuilder<List<JaraguaPregadoresRecord>>(
-                            stream: queryJaraguaPregadoresRecord(),
+                          child: StreamBuilder<List<AnunciosDistritalRecord>>(
+                            stream: queryAnunciosDistritalRecord(),
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
                               if (!snapshot.hasData) {
@@ -185,17 +185,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 );
                               }
-                              List<JaraguaPregadoresRecord>
-                                  listViewJaraguaPregadoresRecordList =
+                              List<AnunciosDistritalRecord>
+                                  listViewAnunciosDistritalRecordList =
                                   snapshot.data;
                               return ListView.builder(
                                 padding: EdgeInsets.zero,
                                 scrollDirection: Axis.horizontal,
                                 itemCount:
-                                    listViewJaraguaPregadoresRecordList.length,
+                                    listViewAnunciosDistritalRecordList.length,
                                 itemBuilder: (context, listViewIndex) {
-                                  final listViewJaraguaPregadoresRecord =
-                                      listViewJaraguaPregadoresRecordList[
+                                  final listViewAnunciosDistritalRecord =
+                                      listViewAnunciosDistritalRecordList[
                                           listViewIndex];
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -220,7 +220,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 children: [
                                                   Image.network(
                                                     valueOrDefault<String>(
-                                                      listViewJaraguaPregadoresRecord
+                                                      listViewAnunciosDistritalRecord
                                                           .img,
                                                       'https://i.ibb.co/cC6RmGZ/businessman.png',
                                                     ),
@@ -234,7 +234,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Text(
-                                                    listViewJaraguaPregadoresRecord
+                                                    listViewAnunciosDistritalRecord
                                                         .nome,
                                                     style: FlutterFlowTheme.of(
                                                             context)
