@@ -299,6 +299,8 @@ class _EscPregadoresJaraguaWidgetState
                               onTap: () async {
                                 await Share.share(
                                     columnJaraguaPregadoresRecord.nome);
+                                await Share.share(
+                                    columnJaraguaPregadoresRecord.whatsapp);
                               },
                               child: Icon(
                                 Icons.share,
