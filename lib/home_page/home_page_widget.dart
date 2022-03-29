@@ -147,18 +147,37 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             child: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 5),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          'Anuncios Distrital',
-                          style: FlutterFlowTheme.of(context).title2,
-                        ),
-                      ],
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            'Anuncios Distrital',
+                            style: FlutterFlowTheme.of(context).title2.override(
+                                  fontFamily: 'Advent Sanslogo',
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                            child: Icon(
+                              Icons.chevron_right,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 24,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -167,7 +186,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           width: MediaQuery.of(context).size.width * 0.95,
                           height: 250,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).alternate,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                           ),
                           child: StreamBuilder<List<AnunciosDistritalRecord>>(
                             stream: queryAnunciosDistritalRecord(),
@@ -234,16 +254,21 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           MainAxisAlignment
                                                               .center,
                                                       children: [
-                                                        Image.network(
-                                                          valueOrDefault<
-                                                              String>(
-                                                            listViewAnunciosDistritalRecord
-                                                                .img,
-                                                            'https://i.ibb.co/cC6RmGZ/businessman.png',
+                                                        ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(10),
+                                                          child: Image.network(
+                                                            valueOrDefault<
+                                                                String>(
+                                                              listViewAnunciosDistritalRecord
+                                                                  .img,
+                                                              'https://i.ibb.co/cC6RmGZ/businessman.png',
+                                                            ),
+                                                            width: 140,
+                                                            height: 140,
+                                                            fit: BoxFit.cover,
                                                           ),
-                                                          width: 140,
-                                                          height: 140,
-                                                          fit: BoxFit.cover,
                                                         ),
                                                       ],
                                                     ),
@@ -274,6 +299,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primaryBackground,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -305,6 +333,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -326,7 +357,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           listViewAnunciosDistritalRecord
                                                               .local
                                                               .maybeHandleOverflow(
-                                                                  maxChars: 15),
+                                                            maxChars: 15,
+                                                            replacement: '…',
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyText1
@@ -336,6 +369,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primaryBackground,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -365,7 +401,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Text(
                             'Jaraguá Anuncios',
-                            style: FlutterFlowTheme.of(context).title2,
+                            style: FlutterFlowTheme.of(context).title2.override(
+                                  fontFamily: 'Advent Sanslogo',
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
+                                ),
                           ),
                         ],
                       ),
