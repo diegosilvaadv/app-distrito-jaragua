@@ -191,7 +191,7 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                                         Icons.people_sharp,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        size: 70,
+                                        size: 50,
                                       ),
                                     ],
                                   ),
@@ -247,7 +247,7 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                                       Icons.mouse,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      size: 60,
+                                      size: 50,
                                     ),
                                   ],
                                 ),
@@ -306,7 +306,7 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                                       Icons.mic_external_on,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      size: 60,
+                                      size: 50,
                                     ),
                                   ],
                                 ),
@@ -365,7 +365,7 @@ class _PageVilaauroraWidgetState extends State<PageVilaauroraWidget> {
                                       Icons.person_search_sharp,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      size: 60,
+                                      size: 50,
                                     ),
                                   ],
                                 ),

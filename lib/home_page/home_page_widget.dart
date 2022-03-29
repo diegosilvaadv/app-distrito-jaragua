@@ -169,10 +169,96 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           decoration: BoxDecoration(
                             color: Color(0xFFEEEEEE),
                           ),
-                          child: ListView(
-                            padding: EdgeInsets.zero,
-                            scrollDirection: Axis.horizontal,
-                            children: [],
+                          child: StreamBuilder<List<AnunciosDistritalRecord>>(
+                            stream: queryAnunciosDistritalRecord(),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50,
+                                    height: 50,
+                                    child: CircularProgressIndicator(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                    ),
+                                  ),
+                                );
+                              }
+                              List<AnunciosDistritalRecord>
+                                  listViewAnunciosDistritalRecordList =
+                                  snapshot.data;
+                              return ListView.builder(
+                                padding: EdgeInsets.zero,
+                                scrollDirection: Axis.horizontal,
+                                itemCount:
+                                    listViewAnunciosDistritalRecordList.length,
+                                itemBuilder: (context, listViewIndex) {
+                                  final listViewAnunciosDistritalRecord =
+                                      listViewAnunciosDistritalRecordList[
+                                          listViewIndex];
+                                  return Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            5, 5, 5, 5),
+                                        child: Container(
+                                          width: 150,
+                                          height: 250,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryBackground,
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Image.network(
+                                                    valueOrDefault<String>(
+                                                      listViewAnunciosDistritalRecord
+                                                          .img,
+                                                      'https://i.ibb.co/cC6RmGZ/businessman.png',
+                                                    ),
+                                                    width: 100,
+                                                    height: 100,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    listViewAnunciosDistritalRecord
+                                                        .nome,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'OpensSans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
                           ),
                         ),
                       ],

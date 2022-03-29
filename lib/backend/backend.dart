@@ -9,6 +9,7 @@ import 'schema/jaragua_pregadores_record.dart';
 import 'schema/ipanema_pregadores_record.dart';
 import 'schema/panamericano_pregadores_record.dart';
 import 'schema/aurora_pregadores_record.dart';
+import 'schema/anuncios_distrital_record.dart';
 import 'schema/serializers.dart';
 
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -20,6 +21,7 @@ export 'schema/jaragua_pregadores_record.dart';
 export 'schema/ipanema_pregadores_record.dart';
 export 'schema/panamericano_pregadores_record.dart';
 export 'schema/aurora_pregadores_record.dart';
+export 'schema/anuncios_distrital_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord(
@@ -105,6 +107,23 @@ Future<List<AuroraPregadoresRecord>> queryAuroraPregadoresRecordOnce(
         bool singleRecord = false}) =>
     queryCollectionOnce(
         AuroraPregadoresRecord.collection, AuroraPregadoresRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+/// Functions to query AnunciosDistritalRecords (as a Stream and as a Future).
+Stream<List<AnunciosDistritalRecord>> queryAnunciosDistritalRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(
+        AnunciosDistritalRecord.collection, AnunciosDistritalRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<AnunciosDistritalRecord>> queryAnunciosDistritalRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(
+        AnunciosDistritalRecord.collection, AnunciosDistritalRecord.serializer,
         queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
 
 Stream<List<T>> queryCollection<T>(

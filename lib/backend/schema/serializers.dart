@@ -5,6 +5,7 @@ import 'jaragua_pregadores_record.dart';
 import 'ipanema_pregadores_record.dart';
 import 'panamericano_pregadores_record.dart';
 import 'aurora_pregadores_record.dart';
+import 'anuncios_distrital_record.dart';
 
 import 'index.dart';
 
@@ -20,6 +21,7 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   IpanemaPregadoresRecord,
   PanamericanoPregadoresRecord,
   AuroraPregadoresRecord,
+  AnunciosDistritalRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

@@ -189,7 +189,7 @@ class _PageJaIpanemaWidgetState extends State<PageJaIpanemaWidget> {
                                       Icon(
                                         Icons.people_sharp,
                                         color: Colors.black,
-                                        size: 70,
+                                        size: 50,
                                       ),
                                     ],
                                   ),
@@ -244,7 +244,7 @@ class _PageJaIpanemaWidgetState extends State<PageJaIpanemaWidget> {
                                     Icon(
                                       Icons.mouse,
                                       color: Colors.black,
-                                      size: 60,
+                                      size: 50,
                                     ),
                                   ],
                                 ),
@@ -302,7 +302,7 @@ class _PageJaIpanemaWidgetState extends State<PageJaIpanemaWidget> {
                                     Icon(
                                       Icons.mic_external_on,
                                       color: Colors.black,
-                                      size: 60,
+                                      size: 50,
                                     ),
                                   ],
                                 ),
@@ -360,7 +360,7 @@ class _PageJaIpanemaWidgetState extends State<PageJaIpanemaWidget> {
                                     Icon(
                                       Icons.person_search_sharp,
                                       color: Colors.black,
-                                      size: 60,
+                                      size: 50,
                                     ),
                                   ],
                                 ),
