@@ -38,6 +38,8 @@ abstract class FlutterFlowTheme {
   Color primaryText;
   Color secondaryText;
 
+  Color customColor1;
+
   TextStyle get title1 => TextStyle(
         fontFamily: 'Advent Sanslogo',
         color: primaryText,
@@ -91,6 +93,8 @@ class LightModeTheme extends FlutterFlowTheme {
   Color secondaryBackground = const Color(0xFFEBEBEB);
   Color primaryText = const Color(0xFF000000);
   Color secondaryText = const Color(0xFF3F3F3F);
+
+  Color customColor1 = Color(0xFF368EE8);
 }
 
 class DarkModeTheme extends FlutterFlowTheme {
@@ -102,6 +106,8 @@ class DarkModeTheme extends FlutterFlowTheme {
   Color secondaryBackground = const Color(0x00000000);
   Color primaryText = const Color(0xFFFFFFFF);
   Color secondaryText = const Color(0xFFB3B3B3);
+
+  Color customColor1 = Color(0xFF011C3A);
 }
 
 extension TextStyleHelper on TextStyle {

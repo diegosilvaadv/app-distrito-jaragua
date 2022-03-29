@@ -232,12 +232,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     5, 5, 5, 5),
                                             child: Container(
-                                              width: 150,
-                                              height: 230,
+                                              width: 160,
+                                              height: 240,
                                               decoration: BoxDecoration(
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryText,
+                                                        .customColor1,
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
@@ -306,7 +306,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       'OpensSans',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primaryBackground,
+                                                                      .primaryText,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
@@ -340,7 +340,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       'OpensSans',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primaryBackground,
+                                                                      .primaryText,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .normal,
@@ -376,7 +376,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       'OpensSans',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primaryBackground,
+                                                                      .primaryText,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .normal,
