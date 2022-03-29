@@ -194,7 +194,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               height: 250,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                    .primaryBackground,
                               ),
                               child:
                                   StreamBuilder<List<AnunciosDistritalRecord>>(
@@ -402,7 +402,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(10, 5, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
