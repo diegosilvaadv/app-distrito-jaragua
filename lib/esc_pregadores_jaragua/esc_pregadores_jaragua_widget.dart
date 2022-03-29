@@ -305,9 +305,7 @@ class _EscPregadoresJaraguaWidgetState
                             InkWell(
                               onTap: () async {
                                 await Share.share(
-                                    columnJaraguaPregadoresRecord.whatsapp);
-                                await Share.share(
-                                    columnJaraguaPregadoresRecord.igreja);
+                                    '${columnJaraguaPregadoresRecord.nome}${dateTimeFormat('yMd', columnJaraguaPregadoresRecord.data)}${columnJaraguaPregadoresRecord.igreja}${columnJaraguaPregadoresRecord.whatsapp}');
                               },
                               child: Icon(
                                 Icons.share,
