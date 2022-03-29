@@ -11,6 +11,7 @@ import 'flutter_flow/internationalization.dart';
 import 'package:app_distrito_jaragua/loginpage/loginpage_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'home_page/home_page_widget.dart';
 import 'igrejas/igrejas_widget.dart';
 import 'perfil/perfil_widget.dart';
@@ -126,47 +127,92 @@ class _NavBarPageState extends State<NavBarPage> {
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
       body: tabs[_currentPage],
-      bottomNavigationBar: BottomNavigationBar(
+      extendBody: true,
+      bottomNavigationBar: FloatingNavbar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         selectedItemColor: FlutterFlowTheme.of(context).secondaryColor,
         unselectedItemColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24,
+        selectedBackgroundColor: Color(0x00000000),
+        borderRadius: 10,
+        itemBorderRadius: 10,
+        margin: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+        width: double.infinity,
+        elevation: 50,
+        items: [
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  currentIndex == 0 ? Icons.home : Icons.home_outlined,
+                  color: currentIndex == 0
+                      ? FlutterFlowTheme.of(context).secondaryColor
+                      : Colors.white,
+                  size: 24,
+                ),
+                Text(
+                  'Home',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 0
+                        ? FlutterFlowTheme.of(context).secondaryColor
+                        : Colors.white,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            activeIcon: Icon(
-              Icons.home,
-              size: 24,
-            ),
-            label: 'Home',
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.church,
-              size: 24,
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  FontAwesomeIcons.church,
+                  color: currentIndex == 1
+                      ? FlutterFlowTheme.of(context).secondaryColor
+                      : Colors.white,
+                  size: 24,
+                ),
+                Text(
+                  'Igrejas',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 1
+                        ? FlutterFlowTheme.of(context).secondaryColor
+                        : Colors.white,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            label: 'Igrejas',
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.perm_identity,
-              size: 24,
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  currentIndex == 2 ? Icons.person : Icons.perm_identity,
+                  color: currentIndex == 2
+                      ? FlutterFlowTheme.of(context).secondaryColor
+                      : Colors.white,
+                  size: 24,
+                ),
+                Text(
+                  'Perfil',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 2
+                        ? FlutterFlowTheme.of(context).secondaryColor
+                        : Colors.white,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            activeIcon: Icon(
-              Icons.person,
-              size: 24,
-            ),
-            label: 'Perfil',
-            tooltip: '',
           )
         ],
       ),
