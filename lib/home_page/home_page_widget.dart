@@ -170,10 +170,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             color: Color(0xFFEEEEEE),
                           ),
                           child: StreamBuilder<List<AnunciosDistritalRecord>>(
-                            stream: queryAnunciosDistritalRecord(
-                              queryBuilder: (anunciosDistritalRecord) =>
-                                  anunciosDistritalRecord.orderBy('data'),
-                            ),
+                            stream: queryAnunciosDistritalRecord(),
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
                               if (!snapshot.hasData) {
