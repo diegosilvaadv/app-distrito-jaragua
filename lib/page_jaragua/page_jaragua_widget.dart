@@ -163,8 +163,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           );
                         },
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: double.infinity,
+                          height: double.infinity,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).primaryText,
                             borderRadius: BorderRadius.circular(10),
@@ -229,8 +229,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           );
                         },
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: double.infinity,
+                          height: double.infinity,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).primaryText,
                             borderRadius: BorderRadius.circular(10),
@@ -299,8 +299,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           );
                         },
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: double.infinity,
+                          height: double.infinity,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).primaryText,
                             borderRadius: BorderRadius.circular(10),
@@ -369,8 +369,8 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           );
                         },
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: double.infinity,
+                          height: double.infinity,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).primaryText,
                             borderRadius: BorderRadius.circular(10),

@@ -185,17 +185,21 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Text(
-                                        'IGREJA CENTRAL DO DISTRITO.',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'OpensSans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryColor,
-                                              useGoogleFonts: false,
-                                            ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 5),
+                                        child: Text(
+                                          'IGREJA CENTRAL DO DISTRITO.',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'OpensSans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryColor,
+                                                useGoogleFonts: false,
+                                              ),
+                                        ),
                                       ),
                                     ],
                                   ),
