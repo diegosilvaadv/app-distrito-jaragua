@@ -84,9 +84,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Text(
                       'Igreja Adventista do',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Advent Sanslogo',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontWeight: FontWeight.normal,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ],
@@ -98,8 +99,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Text(
                       'DIST. JARAGUÁ',
                       style: FlutterFlowTheme.of(context).title1.override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Advent Sanslogo',
                             color: FlutterFlowTheme.of(context).primaryText,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ],

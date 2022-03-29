@@ -302,7 +302,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                     child: FaIcon(
                                       FontAwesomeIcons.solidMoon,
                                       color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
+                                          .primaryText,
                                       size: 24,
                                     ),
                                   ),
@@ -619,15 +619,8 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         FFButtonWidget(
-                          onPressed: () async {
-                            await signOut();
-                            await Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LoginpageWidget(),
-                              ),
-                              (r) => false,
-                            );
+                          onPressed: () {
+                            print('Button pressed ...');
                           },
                           text: 'Administradores',
                           options: FFButtonOptions(
@@ -637,8 +630,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                             textStyle:
                                 FlutterFlowTheme.of(context).bodyText2.override(
                                       fontFamily: 'Lexend Deca',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
+                                      color: Colors.white,
                                       fontSize: 14,
                                       fontWeight: FontWeight.normal,
                                     ),

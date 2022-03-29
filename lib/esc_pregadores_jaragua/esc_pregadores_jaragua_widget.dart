@@ -41,8 +41,9 @@ class _EscPregadoresJaraguaWidgetState
         title: Text(
           'ESC DE PREGADORES',
           style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
+                fontFamily: 'Advent Sanslogo',
                 color: FlutterFlowTheme.of(context).primaryBackground,
+                useGoogleFonts: false,
               ),
         ),
         actions: [],
@@ -114,10 +115,12 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Text(
@@ -130,12 +133,14 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ],
@@ -149,10 +154,12 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Text(
@@ -167,12 +174,14 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Padding(
@@ -190,12 +199,13 @@ class _EscPregadoresJaraguaWidgetState
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'OpensSans',
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .primaryBackground,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -210,10 +220,12 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Text(
@@ -226,12 +238,14 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ],
@@ -245,10 +259,12 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Text(
@@ -261,12 +277,14 @@ class _EscPregadoresJaraguaWidgetState
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily:
+                                                              'OpensSans',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ],

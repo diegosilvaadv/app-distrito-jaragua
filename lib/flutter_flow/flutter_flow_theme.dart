@@ -38,47 +38,44 @@ abstract class FlutterFlowTheme {
   Color primaryText;
   Color secondaryText;
 
-  Color primaryBtnText;
-  Color lineColor;
-
-  TextStyle get title1 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get title1 => TextStyle(
+        fontFamily: 'Advent Sanslogo',
         color: primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        fontSize: 30,
       );
-  TextStyle get title2 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get title2 => TextStyle(
+        fontFamily: 'Advent Sanslogo',
         color: secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 22,
       );
-  TextStyle get title3 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get title3 => TextStyle(
+        fontFamily: 'OpensSans',
         color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 20,
       );
-  TextStyle get subtitle1 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get subtitle1 => TextStyle(
+        fontFamily: 'OpensSans',
         color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 18,
       );
-  TextStyle get subtitle2 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get subtitle2 => TextStyle(
+        fontFamily: 'OpensSans',
         color: secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 16,
       );
-  TextStyle get bodyText1 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get bodyText1 => TextStyle(
+        fontFamily: 'OpensSans',
         color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 14,
       );
-  TextStyle get bodyText2 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get bodyText2 => TextStyle(
+        fontFamily: 'OpensSans',
         color: secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 14,
@@ -86,31 +83,25 @@ abstract class FlutterFlowTheme {
 }
 
 class LightModeTheme extends FlutterFlowTheme {
-  Color primaryColor = const Color(0xFF4B39EF);
-  Color secondaryColor = const Color(0xFF39D2C0);
-  Color tertiaryColor = const Color(0xFFEE8B60);
-  Color alternate = const Color(0xFFFF5963);
-  Color primaryBackground = const Color(0xFFF1F4F8);
-  Color secondaryBackground = const Color(0xFFFFFFFF);
-  Color primaryText = const Color(0xFF101213);
-  Color secondaryText = const Color(0xFF57636C);
-
-  Color primaryBtnText = Color(0xFFFFFFFF);
-  Color lineColor = Color(0xFFE0E3E7);
+  Color primaryColor = const Color(0xFF033669);
+  Color secondaryColor = const Color(0xFFE36520);
+  Color tertiaryColor = const Color(0xFFAD843D);
+  Color alternate = const Color(0xFF284445);
+  Color primaryBackground = const Color(0xFFFFFFFF);
+  Color secondaryBackground = const Color(0xFFBCBCBC);
+  Color primaryText = const Color(0xFF000000);
+  Color secondaryText = const Color(0xFF3F3F3F);
 }
 
 class DarkModeTheme extends FlutterFlowTheme {
-  Color primaryColor = const Color(0xFF4B39EF);
-  Color secondaryColor = const Color(0xFF39D2C0);
-  Color tertiaryColor = const Color(0xFFEE8B60);
-  Color alternate = const Color(0xFFFF5963);
-  Color primaryBackground = const Color(0xFF1A1F24);
-  Color secondaryBackground = const Color(0xFF101213);
+  Color primaryColor = const Color(0xFF033669);
+  Color secondaryColor = const Color(0xFFE36520);
+  Color tertiaryColor = const Color(0xFFAD843D);
+  Color alternate = const Color(0xFF284445);
+  Color primaryBackground = const Color(0xFF000000);
+  Color secondaryBackground = const Color(0xFF141414);
   Color primaryText = const Color(0xFFFFFFFF);
-  Color secondaryText = const Color(0xFF95A1AC);
-
-  Color primaryBtnText = Color(0xFFFFFFFF);
-  Color lineColor = Color(0xFF22282F);
+  Color secondaryText = const Color(0xFFB3B3B3);
 }
 
 extension TextStyleHelper on TextStyle {

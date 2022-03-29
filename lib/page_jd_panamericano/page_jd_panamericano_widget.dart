@@ -94,11 +94,12 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .title1
                                               .override(
-                                                fontFamily: 'Poppins',
+                                                fontFamily: 'Advent Sanslogo',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 30,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -176,10 +177,11 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Poppins',
+                                                fontFamily: 'OpensSans',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBackground,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -243,10 +245,11 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
-                                                  fontFamily: 'Poppins',
+                                                  fontFamily: 'OpensSans',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryBackground,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ],
@@ -311,10 +314,11 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
-                                                  fontFamily: 'Poppins',
+                                                  fontFamily: 'OpensSans',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryBackground,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ],
@@ -379,10 +383,11 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
-                                                  fontFamily: 'Poppins',
+                                                  fontFamily: 'OpensSans',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryBackground,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ],

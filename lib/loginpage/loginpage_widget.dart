@@ -82,8 +82,9 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                   child: Text(
                     'Dist. do Jaraguá',
                     style: FlutterFlowTheme.of(context).title1.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Advent Sanslogo',
                           fontSize: 30,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ),
@@ -688,17 +689,19 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'OpensSans',
                                             color: Color(0xFF2B343A),
                                             fontWeight: FontWeight.normal,
+                                            useGoogleFonts: false,
                                           ),
                                       hintText: 'Codigo de acesso',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'OpensSans',
                                             color: Color(0xFF2B343A),
                                             fontWeight: FontWeight.normal,
+                                            useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -720,9 +723,10 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'OpensSans',
                                           color: Color(0xFF2B343A),
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
