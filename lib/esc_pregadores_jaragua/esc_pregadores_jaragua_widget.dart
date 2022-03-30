@@ -190,6 +190,10 @@ class _EscPregadoresJaraguaWidgetState
                                                         ),
                                                       ],
                                                     ),
+                                                    Divider(
+                                                      height: 10,
+                                                      color: Color(0xFFD4D4D4),
+                                                    ),
                                                     Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -429,7 +433,7 @@ class _EscPregadoresJaraguaWidgetState
                                     child: Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                          .alternate,
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
