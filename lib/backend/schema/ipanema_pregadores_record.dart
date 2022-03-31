@@ -27,6 +27,9 @@ abstract class IpanemaPregadoresRecord
   String get img;
 
   @nullable
+  bool get ativo;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -35,7 +38,8 @@ abstract class IpanemaPregadoresRecord
         ..nome = ''
         ..igreja = ''
         ..whatsapp = ''
-        ..img = '';
+        ..img = ''
+        ..ativo = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('ipanema_pregadores');
@@ -66,6 +70,7 @@ Map<String, dynamic> createIpanemaPregadoresRecordData({
   String igreja,
   String whatsapp,
   String img,
+  bool ativo,
 }) =>
     serializers.toFirestore(
         IpanemaPregadoresRecord.serializer,
@@ -74,4 +79,5 @@ Map<String, dynamic> createIpanemaPregadoresRecordData({
           ..data = data
           ..igreja = igreja
           ..whatsapp = whatsapp
-          ..img = img));
+          ..img = img
+          ..ativo = ativo));

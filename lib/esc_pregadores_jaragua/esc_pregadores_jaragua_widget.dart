@@ -83,7 +83,11 @@ class _EscPregadoresJaraguaWidgetState
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                       child: StreamBuilder<List<JaraguaPregadoresRecord>>(
-                        stream: queryJaraguaPregadoresRecord(),
+                        stream: queryJaraguaPregadoresRecord(
+                          queryBuilder: (jaraguaPregadoresRecord) =>
+                              jaraguaPregadoresRecord.where('ativo',
+                                  isEqualTo: true),
+                        ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
                           if (!snapshot.hasData) {
@@ -507,6 +511,9 @@ class _EscPregadoresJaraguaWidgetState
                                                               ),
                                                         ),
                                                       ],
+                                                    ),
+                                                    Divider(
+                                                      height: 10,
                                                     ),
                                                     Row(
                                                       mainAxisSize:

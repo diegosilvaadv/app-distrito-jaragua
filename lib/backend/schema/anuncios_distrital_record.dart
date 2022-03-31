@@ -24,6 +24,9 @@ abstract class AnunciosDistritalRecord
   String get local;
 
   @nullable
+  bool get ativo;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -31,7 +34,8 @@ abstract class AnunciosDistritalRecord
       builder
         ..nome = ''
         ..img = ''
-        ..local = '';
+        ..local = ''
+        ..ativo = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('anuncios_distrital');
@@ -61,6 +65,7 @@ Map<String, dynamic> createAnunciosDistritalRecordData({
   DateTime data,
   String img,
   String local,
+  bool ativo,
 }) =>
     serializers.toFirestore(
         AnunciosDistritalRecord.serializer,
@@ -68,4 +73,5 @@ Map<String, dynamic> createAnunciosDistritalRecordData({
           ..nome = nome
           ..data = data
           ..img = img
-          ..local = local));
+          ..local = local
+          ..ativo = ativo));
