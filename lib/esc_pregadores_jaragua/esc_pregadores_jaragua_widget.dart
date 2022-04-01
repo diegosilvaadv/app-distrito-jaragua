@@ -404,7 +404,7 @@ class _EscPregadoresJaraguaWidgetState
                         stream: queryJaraguaPregadoresRecord(
                           queryBuilder: (jaraguaPregadoresRecord) =>
                               jaraguaPregadoresRecord.where('ativo',
-                                  isEqualTo: true),
+                                  isEqualTo: false),
                         ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
