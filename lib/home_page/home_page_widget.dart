@@ -293,7 +293,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       children: [
                                                         Text(
                                                           listViewAnunciosDistritalRecord
-                                                              .nome
+                                                              .titulo
                                                               .maybeHandleOverflow(
                                                             maxChars: 15,
                                                             replacement: '…',
