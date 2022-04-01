@@ -1,4 +1,5 @@
 import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
+import '../esc_sonoplastia_jaragua/esc_sonoplastia_jaragua_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -230,7 +231,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
+                                  EscSonoplastiaJaraguaWidget(),
                             ),
                           );
                         },
