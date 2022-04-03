@@ -2,6 +2,7 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -290,52 +291,53 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                     Divider(
                                                       height: 10,
                                                     ),
-                                                    Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Text(
-                                                          'IGREJA: ',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Colors
-                                                                    .white,
-                                                                fontSize: 16,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          valueOrDefault<
-                                                              String>(
-                                                            columnEscalaPastoralRecord
-                                                                .igreja,
-                                                            'S/ Igreja',
-                                                          ).maybeHandleOverflow(
-                                                            maxChars: 20,
-                                                            replacement: '…',
+                                                    SingleChildScrollView(
+                                                      scrollDirection:
+                                                          Axis.horizontal,
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'IGREJA: ',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'OpensSans',
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 16,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                           ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Color(
-                                                                    0xFFD5B57B),
-                                                                fontSize: 16,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                        ),
-                                                      ],
+                                                          AutoSizeText(
+                                                            valueOrDefault<
+                                                                String>(
+                                                              columnEscalaPastoralRecord
+                                                                  .igreja,
+                                                              'S/ Igreja',
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'OpensSans',
+                                                                  color: Color(
+                                                                      0xFFD5B57B),
+                                                                  fontSize: 16,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
+                                                        ],
+                                                      ),
                                                     ),
                                                   ],
                                                 ),
@@ -587,49 +589,53 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                   ],
                                                 ),
                                                 Divider(),
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Text(
-                                                      'IGREJA: ',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'OpensSans',
-                                                            color: Colors.white,
-                                                            fontSize: 16,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      valueOrDefault<String>(
-                                                        columnEscalaPastoralRecord
-                                                            .igreja,
-                                                        'S/ Igreja',
-                                                      ).maybeHandleOverflow(
-                                                        maxChars: 20,
-                                                        replacement: '…',
+                                                SingleChildScrollView(
+                                                  scrollDirection:
+                                                      Axis.horizontal,
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Text(
+                                                        'IGREJA: ',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'OpensSans',
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 16,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                            ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'OpensSans',
-                                                            color: Color(
-                                                                0xFFD5B57B),
-                                                            fontSize: 16,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                      AutoSizeText(
+                                                        valueOrDefault<String>(
+                                                          columnEscalaPastoralRecord
+                                                              .igreja,
+                                                          'S/ Igreja',
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'OpensSans',
+                                                                  color: Color(
+                                                                      0xFFD5B57B),
+                                                                  fontSize: 16,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ],
                                             ),
