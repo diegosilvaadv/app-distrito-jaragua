@@ -4,7 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ViewAnucioWidget extends StatefulWidget {
-  const ViewAnucioWidget({Key key}) : super(key: key);
+  const ViewAnucioWidget({
+    Key key,
+    this.img,
+    this.titulo,
+    this.descricao,
+  }) : super(key: key);
+
+  final String img;
+  final String titulo;
+  final String descricao;
 
   @override
   _ViewAnucioWidgetState createState() => _ViewAnucioWidgetState();
@@ -16,7 +25,7 @@ class _ViewAnucioWidgetState extends State<ViewAnucioWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: FlutterFlowTheme.of(context).primaryBackground,
         boxShadow: [
           BoxShadow(
             blurRadius: 7,
@@ -34,7 +43,10 @@ class _ViewAnucioWidgetState extends State<ViewAnucioWidget> {
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: Image.network(
-                'https://picsum.photos/seed/277/600',
+                valueOrDefault<String>(
+                  widget.img,
+                  'https://picsum.photos/seed/277/600',
+                ),
                 width: double.infinity,
                 height: 100,
                 fit: BoxFit.cover,
@@ -46,10 +58,10 @@ class _ViewAnucioWidgetState extends State<ViewAnucioWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    'Main Header',
+                    widget.titulo,
                     style: FlutterFlowTheme.of(context).subtitle1.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF090F13),
+                          color: FlutterFlowTheme.of(context).primaryText,
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
                         ),
@@ -62,10 +74,10 @@ class _ViewAnucioWidgetState extends State<ViewAnucioWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    'I’ll be working on a few different proposals, let me know when you’ve got time to go over them before the weekend.',
+                    widget.descricao,
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF57636C),
+                          color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),

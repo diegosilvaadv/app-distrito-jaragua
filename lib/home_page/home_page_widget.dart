@@ -260,7 +260,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     .height *
                                                                 0.7,
                                                             child:
-                                                                ViewAnucioWidget(),
+                                                                ViewAnucioWidget(
+                                                              img:
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .img,
+                                                              titulo:
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .titulo,
+                                                              descricao:
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .descricao,
+                                                            ),
                                                           ),
                                                         );
                                                       },
