@@ -243,13 +243,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     await showModalBottomSheet(
                                                       isScrollControlled: true,
                                                       backgroundColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryBackground,
+                                                          Colors.transparent,
                                                       barrierColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
+                                                          Color(0x00FFFFFF),
                                                       context: context,
                                                       builder: (context) {
                                                         return Padding(
@@ -262,7 +258,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         context)
                                                                     .size
                                                                     .height *
-                                                                0.5,
+                                                                0.7,
                                                             child:
                                                                 ViewAnucioWidget(),
                                                           ),
