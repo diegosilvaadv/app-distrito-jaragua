@@ -193,7 +193,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 0.95,
-                                height: 250,
+                                height: 270,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
@@ -259,7 +259,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(
-                                                                    5, 5, 5, 3),
+                                                                    5, 7, 5, 3),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -363,9 +363,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           ],
                                                         ),
                                                       ),
-                                                      SingleChildScrollView(
-                                                        scrollDirection:
-                                                            Axis.horizontal,
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(10, 0,
+                                                                    10, 10),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -373,29 +375,29 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               MainAxisAlignment
                                                                   .center,
                                                           children: [
-                                                            Text(
-                                                              listViewAnunciosDistritalRecord
-                                                                  .local
-                                                                  .maybeHandleOverflow(
-                                                                maxChars: 15,
-                                                                replacement:
-                                                                    '…',
+                                                            Expanded(
+                                                              child: Text(
+                                                                listViewAnunciosDistritalRecord
+                                                                    .local,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'OpensSans',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryText,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
                                                               ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyText1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'OpensSans',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryText,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .normal,
-                                                                    useGoogleFonts:
-                                                                        false,
-                                                                  ),
                                                             ),
                                                           ],
                                                         ),
