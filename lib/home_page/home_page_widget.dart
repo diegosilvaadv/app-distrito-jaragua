@@ -304,12 +304,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             children: [
                                                               Text(
                                                                 listViewAnunciosDistritalRecord
-                                                                    .titulo
-                                                                    .maybeHandleOverflow(
-                                                                  maxChars: 15,
-                                                                  replacement:
-                                                                      '…',
-                                                                ),
+                                                                    .titulo,
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyText1
