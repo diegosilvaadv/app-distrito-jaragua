@@ -38,7 +38,7 @@ class _EscMusicaJaraguaWidgetState extends State<EscMusicaJaraguaWidget> {
           },
         ),
         title: Text(
-          'ESC DE PREGADORES',
+          'ESC DA MUSICA',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Advent Sanslogo',
                 color: Colors.white,
