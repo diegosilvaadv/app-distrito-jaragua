@@ -119,29 +119,28 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryColor,
-                                      child: SingleChildScrollView(
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(5, 5, 5, 5),
-                                                  child: ClipRRect(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10),
-                                                    child: Image.asset(
-                                                      'assets/images/1648997484181.jpg',
-                                                      width: 110,
-                                                      height: 110,
-                                                      fit: BoxFit.cover,
-                                                    ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 5, 5, 5),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child: Image.asset(
+                                                    'assets/images/1648997484181.jpg',
+                                                    width: 110,
+                                                    height: 110,
+                                                    fit: BoxFit.cover,
                                                   ),
                                                 ),
-                                                Padding(
+                                              ),
+                                              Expanded(
+                                                child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(5, 0, 0, 0),
                                                   child: Column(
@@ -297,30 +296,27 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                       Divider(
                                                         height: 10,
                                                       ),
-                                                      SingleChildScrollView(
-                                                        scrollDirection:
-                                                            Axis.horizontal,
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Text(
-                                                              'IGREJA: ',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyText1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'OpensSans',
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        16,
-                                                                    useGoogleFonts:
-                                                                        false,
-                                                                  ),
-                                                            ),
-                                                            AutoSizeText(
+                                                      Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'IGREJA: ',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'OpensSans',
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 16,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
+                                                          Expanded(
+                                                            child: AutoSizeText(
                                                               valueOrDefault<
                                                                   String>(
                                                                 columnEscalaPastoralRecord
@@ -344,16 +340,16 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                                         false,
                                                                   ),
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
                                                     ],
                                                   ),
                                                 ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
