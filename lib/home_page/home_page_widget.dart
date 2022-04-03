@@ -290,10 +290,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         ),
                                                       ),
                                                       Expanded(
-                                                        child:
-                                                            SingleChildScrollView(
-                                                          scrollDirection:
-                                                              Axis.horizontal,
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(10,
+                                                                      0, 10, 0),
                                                           child: Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
@@ -302,24 +303,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 MainAxisAlignment
                                                                     .center,
                                                             children: [
-                                                              Text(
-                                                                listViewAnunciosDistritalRecord
-                                                                    .titulo,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyText1
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'OpensSans',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primaryText,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
-                                                                      useGoogleFonts:
-                                                                          false,
-                                                                    ),
+                                                              Expanded(
+                                                                child: Text(
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .titulo,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'OpensSans',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primaryText,
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
+                                                                ),
                                                               ),
                                                             ],
                                                           ),
