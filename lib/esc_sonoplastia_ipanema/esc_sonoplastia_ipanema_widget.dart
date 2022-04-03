@@ -5,16 +5,16 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EscSonoplastiaJaraguaWidget extends StatefulWidget {
-  const EscSonoplastiaJaraguaWidget({Key key}) : super(key: key);
+class EscSonoplastiaIpanemaWidget extends StatefulWidget {
+  const EscSonoplastiaIpanemaWidget({Key key}) : super(key: key);
 
   @override
-  _EscSonoplastiaJaraguaWidgetState createState() =>
-      _EscSonoplastiaJaraguaWidgetState();
+  _EscSonoplastiaIpanemaWidgetState createState() =>
+      _EscSonoplastiaIpanemaWidgetState();
 }
 
-class _EscSonoplastiaJaraguaWidgetState
-    extends State<EscSonoplastiaJaraguaWidget> {
+class _EscSonoplastiaIpanemaWidgetState
+    extends State<EscSonoplastiaIpanemaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -82,10 +82,10 @@ class _EscSonoplastiaJaraguaWidgetState
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                      child: StreamBuilder<List<JaraguaSonoplastiaRecord>>(
-                        stream: queryJaraguaSonoplastiaRecord(
-                          queryBuilder: (jaraguaSonoplastiaRecord) =>
-                              jaraguaSonoplastiaRecord.where('ativo',
+                      child: StreamBuilder<List<IpanemaSonoplastiaRecord>>(
+                        stream: queryIpanemaSonoplastiaRecord(
+                          queryBuilder: (ipanemaSonoplastiaRecord) =>
+                              ipanemaSonoplastiaRecord.where('ativo',
                                   isEqualTo: true),
                         ),
                         builder: (context, snapshot) {
@@ -102,16 +102,16 @@ class _EscSonoplastiaJaraguaWidgetState
                               ),
                             );
                           }
-                          List<JaraguaSonoplastiaRecord>
-                              columnJaraguaSonoplastiaRecordList =
+                          List<IpanemaSonoplastiaRecord>
+                              columnIpanemaSonoplastiaRecordList =
                               snapshot.data;
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             children: List.generate(
-                                columnJaraguaSonoplastiaRecordList.length,
+                                columnIpanemaSonoplastiaRecordList.length,
                                 (columnIndex) {
-                              final columnJaraguaSonoplastiaRecord =
-                                  columnJaraguaSonoplastiaRecordList[
+                              final columnIpanemaSonoplastiaRecord =
+                                  columnIpanemaSonoplastiaRecordList[
                                       columnIndex];
                               return Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -132,7 +132,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                     .fromSTEB(5, 5, 5, 5),
                                                 child: Image.network(
                                                   valueOrDefault<String>(
-                                                    columnJaraguaSonoplastiaRecord
+                                                    columnIpanemaSonoplastiaRecord
                                                         .img,
                                                     'https://i.ibb.co/cC6RmGZ/businessman.png',
                                                   ),
@@ -171,7 +171,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                         Text(
                                                           valueOrDefault<
                                                               String>(
-                                                            columnJaraguaSonoplastiaRecord
+                                                            columnIpanemaSonoplastiaRecord
                                                                 .nome,
                                                             'S/ Nome',
                                                           ).maybeHandleOverflow(
@@ -222,7 +222,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                               String>(
                                                             dateTimeFormat(
                                                                 'd/M/y',
-                                                                columnJaraguaSonoplastiaRecord
+                                                                columnIpanemaSonoplastiaRecord
                                                                     .data),
                                                             'S/ Data',
                                                           ),
@@ -251,7 +251,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                                 String>(
                                                               dateTimeFormat(
                                                                   'EEEE',
-                                                                  columnJaraguaSonoplastiaRecord
+                                                                  columnIpanemaSonoplastiaRecord
                                                                       .data),
                                                               'S/ Dia',
                                                             ),
@@ -314,10 +314,10 @@ class _EscSonoplastiaJaraguaWidgetState
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                      child: StreamBuilder<List<JaraguaSonoplastiaRecord>>(
-                        stream: queryJaraguaSonoplastiaRecord(
-                          queryBuilder: (jaraguaSonoplastiaRecord) =>
-                              jaraguaSonoplastiaRecord.where('ativo',
+                      child: StreamBuilder<List<IpanemaSonoplastiaRecord>>(
+                        stream: queryIpanemaSonoplastiaRecord(
+                          queryBuilder: (ipanemaSonoplastiaRecord) =>
+                              ipanemaSonoplastiaRecord.where('ativo',
                                   isEqualTo: false),
                         ),
                         builder: (context, snapshot) {
@@ -334,16 +334,16 @@ class _EscSonoplastiaJaraguaWidgetState
                               ),
                             );
                           }
-                          List<JaraguaSonoplastiaRecord>
-                              columnJaraguaSonoplastiaRecordList =
+                          List<IpanemaSonoplastiaRecord>
+                              columnIpanemaSonoplastiaRecordList =
                               snapshot.data;
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             children: List.generate(
-                                columnJaraguaSonoplastiaRecordList.length,
+                                columnIpanemaSonoplastiaRecordList.length,
                                 (columnIndex) {
-                              final columnJaraguaSonoplastiaRecord =
-                                  columnJaraguaSonoplastiaRecordList[
+                              final columnIpanemaSonoplastiaRecord =
+                                  columnIpanemaSonoplastiaRecordList[
                                       columnIndex];
                               return Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -364,7 +364,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                     .fromSTEB(5, 5, 5, 5),
                                                 child: Image.network(
                                                   valueOrDefault<String>(
-                                                    columnJaraguaSonoplastiaRecord
+                                                    columnIpanemaSonoplastiaRecord
                                                         .img,
                                                     'https://i.ibb.co/cC6RmGZ/businessman.png',
                                                   ),
@@ -403,7 +403,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                         Text(
                                                           valueOrDefault<
                                                               String>(
-                                                            columnJaraguaSonoplastiaRecord
+                                                            columnIpanemaSonoplastiaRecord
                                                                 .nome,
                                                             'S/ Nome',
                                                           ).maybeHandleOverflow(
@@ -453,7 +453,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                               String>(
                                                             dateTimeFormat(
                                                                 'd/M/y',
-                                                                columnJaraguaSonoplastiaRecord
+                                                                columnIpanemaSonoplastiaRecord
                                                                     .data),
                                                             'S/ Data',
                                                           ),
@@ -482,7 +482,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                                 String>(
                                                               dateTimeFormat(
                                                                   'EEEE',
-                                                                  columnJaraguaSonoplastiaRecord
+                                                                  columnIpanemaSonoplastiaRecord
                                                                       .data),
                                                               'S/ Dia',
                                                             ),

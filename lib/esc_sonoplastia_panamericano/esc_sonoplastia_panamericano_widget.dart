@@ -5,16 +5,16 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EscSonoplastiaJaraguaWidget extends StatefulWidget {
-  const EscSonoplastiaJaraguaWidget({Key key}) : super(key: key);
+class EscSonoplastiaPanamericanoWidget extends StatefulWidget {
+  const EscSonoplastiaPanamericanoWidget({Key key}) : super(key: key);
 
   @override
-  _EscSonoplastiaJaraguaWidgetState createState() =>
-      _EscSonoplastiaJaraguaWidgetState();
+  _EscSonoplastiaPanamericanoWidgetState createState() =>
+      _EscSonoplastiaPanamericanoWidgetState();
 }
 
-class _EscSonoplastiaJaraguaWidgetState
-    extends State<EscSonoplastiaJaraguaWidget> {
+class _EscSonoplastiaPanamericanoWidgetState
+    extends State<EscSonoplastiaPanamericanoWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -82,10 +82,10 @@ class _EscSonoplastiaJaraguaWidgetState
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                      child: StreamBuilder<List<JaraguaSonoplastiaRecord>>(
-                        stream: queryJaraguaSonoplastiaRecord(
-                          queryBuilder: (jaraguaSonoplastiaRecord) =>
-                              jaraguaSonoplastiaRecord.where('ativo',
+                      child: StreamBuilder<List<PanamericanoSonoplastiaRecord>>(
+                        stream: queryPanamericanoSonoplastiaRecord(
+                          queryBuilder: (panamericanoSonoplastiaRecord) =>
+                              panamericanoSonoplastiaRecord.where('ativo',
                                   isEqualTo: true),
                         ),
                         builder: (context, snapshot) {
@@ -102,16 +102,16 @@ class _EscSonoplastiaJaraguaWidgetState
                               ),
                             );
                           }
-                          List<JaraguaSonoplastiaRecord>
-                              columnJaraguaSonoplastiaRecordList =
+                          List<PanamericanoSonoplastiaRecord>
+                              columnPanamericanoSonoplastiaRecordList =
                               snapshot.data;
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             children: List.generate(
-                                columnJaraguaSonoplastiaRecordList.length,
+                                columnPanamericanoSonoplastiaRecordList.length,
                                 (columnIndex) {
-                              final columnJaraguaSonoplastiaRecord =
-                                  columnJaraguaSonoplastiaRecordList[
+                              final columnPanamericanoSonoplastiaRecord =
+                                  columnPanamericanoSonoplastiaRecordList[
                                       columnIndex];
                               return Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -132,7 +132,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                     .fromSTEB(5, 5, 5, 5),
                                                 child: Image.network(
                                                   valueOrDefault<String>(
-                                                    columnJaraguaSonoplastiaRecord
+                                                    columnPanamericanoSonoplastiaRecord
                                                         .img,
                                                     'https://i.ibb.co/cC6RmGZ/businessman.png',
                                                   ),
@@ -171,7 +171,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                         Text(
                                                           valueOrDefault<
                                                               String>(
-                                                            columnJaraguaSonoplastiaRecord
+                                                            columnPanamericanoSonoplastiaRecord
                                                                 .nome,
                                                             'S/ Nome',
                                                           ).maybeHandleOverflow(
@@ -222,7 +222,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                               String>(
                                                             dateTimeFormat(
                                                                 'd/M/y',
-                                                                columnJaraguaSonoplastiaRecord
+                                                                columnPanamericanoSonoplastiaRecord
                                                                     .data),
                                                             'S/ Data',
                                                           ),
@@ -251,7 +251,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                                 String>(
                                                               dateTimeFormat(
                                                                   'EEEE',
-                                                                  columnJaraguaSonoplastiaRecord
+                                                                  columnPanamericanoSonoplastiaRecord
                                                                       .data),
                                                               'S/ Dia',
                                                             ),
@@ -314,10 +314,10 @@ class _EscSonoplastiaJaraguaWidgetState
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                      child: StreamBuilder<List<JaraguaSonoplastiaRecord>>(
-                        stream: queryJaraguaSonoplastiaRecord(
-                          queryBuilder: (jaraguaSonoplastiaRecord) =>
-                              jaraguaSonoplastiaRecord.where('ativo',
+                      child: StreamBuilder<List<PanamericanoSonoplastiaRecord>>(
+                        stream: queryPanamericanoSonoplastiaRecord(
+                          queryBuilder: (panamericanoSonoplastiaRecord) =>
+                              panamericanoSonoplastiaRecord.where('ativo',
                                   isEqualTo: false),
                         ),
                         builder: (context, snapshot) {
@@ -334,16 +334,16 @@ class _EscSonoplastiaJaraguaWidgetState
                               ),
                             );
                           }
-                          List<JaraguaSonoplastiaRecord>
-                              columnJaraguaSonoplastiaRecordList =
+                          List<PanamericanoSonoplastiaRecord>
+                              columnPanamericanoSonoplastiaRecordList =
                               snapshot.data;
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             children: List.generate(
-                                columnJaraguaSonoplastiaRecordList.length,
+                                columnPanamericanoSonoplastiaRecordList.length,
                                 (columnIndex) {
-                              final columnJaraguaSonoplastiaRecord =
-                                  columnJaraguaSonoplastiaRecordList[
+                              final columnPanamericanoSonoplastiaRecord =
+                                  columnPanamericanoSonoplastiaRecordList[
                                       columnIndex];
                               return Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -364,7 +364,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                     .fromSTEB(5, 5, 5, 5),
                                                 child: Image.network(
                                                   valueOrDefault<String>(
-                                                    columnJaraguaSonoplastiaRecord
+                                                    columnPanamericanoSonoplastiaRecord
                                                         .img,
                                                     'https://i.ibb.co/cC6RmGZ/businessman.png',
                                                   ),
@@ -403,7 +403,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                         Text(
                                                           valueOrDefault<
                                                               String>(
-                                                            columnJaraguaSonoplastiaRecord
+                                                            columnPanamericanoSonoplastiaRecord
                                                                 .nome,
                                                             'S/ Nome',
                                                           ).maybeHandleOverflow(
@@ -453,7 +453,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                               String>(
                                                             dateTimeFormat(
                                                                 'd/M/y',
-                                                                columnJaraguaSonoplastiaRecord
+                                                                columnPanamericanoSonoplastiaRecord
                                                                     .data),
                                                             'S/ Data',
                                                           ),
@@ -482,7 +482,7 @@ class _EscSonoplastiaJaraguaWidgetState
                                                                 String>(
                                                               dateTimeFormat(
                                                                   'EEEE',
-                                                                  columnJaraguaSonoplastiaRecord
+                                                                  columnPanamericanoSonoplastiaRecord
                                                                       .data),
                                                               'S/ Dia',
                                                             ),
