@@ -243,7 +243,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     await showModalBottomSheet(
                                                       isScrollControlled: true,
                                                       backgroundColor:
-                                                          Colors.transparent,
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryBackground,
+                                                      barrierColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
                                                       context: context,
                                                       builder: (context) {
                                                         return Padding(
@@ -251,8 +257,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               MediaQuery.of(
                                                                       context)
                                                                   .viewInsets,
-                                                          child:
-                                                              ViewAnucioWidget(),
+                                                          child: Container(
+                                                            height: 50,
+                                                            child:
+                                                                ViewAnucioWidget(),
+                                                          ),
                                                         );
                                                       },
                                                     );
