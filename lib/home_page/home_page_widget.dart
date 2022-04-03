@@ -258,7 +258,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       context)
                                                                   .viewInsets,
                                                           child: Container(
-                                                            height: 50,
+                                                            height: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .height *
+                                                                0.5,
                                                             child:
                                                                 ViewAnucioWidget(),
                                                           ),
