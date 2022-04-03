@@ -4,6 +4,7 @@ import '../esc_sonoplastia_jaragua/esc_sonoplastia_jaragua_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../itinerario_pastoral/itinerario_pastoral_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -367,13 +368,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                       ),
                       InkWell(
                         onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
-                            ),
-                          );
+                          Navigator.pop(context);
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width,
@@ -413,7 +408,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                             MainAxisAlignment.center,
                                         children: [
                                           AutoSizeText(
-                                            'Escala \nPASTORAL',
+                                            'Itinerario \nPASTORAL',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
@@ -439,9 +434,11 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                         onTap: () async {
                           await Navigator.push(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
+                            PageTransition(
+                              type: PageTransitionType.bottomToTop,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child: ItinerarioPastoralWidget(),
                             ),
                           );
                         },
