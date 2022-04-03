@@ -2,7 +2,6 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -287,49 +286,15 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                         ),
                                                       ],
                                                     ),
-                                                    Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Text(
-                                                          'WhatsApp: ',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Colors
-                                                                    .white,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                        ),
-                                                        AutoSizeText(
-                                                          '11 97101-5276',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Color(
-                                                                    0xFFD4D4D4),
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                        ),
-                                                      ],
+                                                    Divider(
+                                                      height: 10,
                                                     ),
                                                     Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
                                                         Text(
-                                                          'Igreja: ',
+                                                          'IGREJA: ',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyText1
@@ -338,6 +303,7 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                                     'OpensSans',
                                                                 color: Colors
                                                                     .white,
+                                                                fontSize: 16,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -360,9 +326,10 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                                     'OpensSans',
                                                                 color: Color(
                                                                     0xFFD5B57B),
+                                                                fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
-                                                                        .normal,
+                                                                        .bold,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -616,12 +583,13 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                     ),
                                                   ],
                                                 ),
+                                                Divider(),
                                                 Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
                                                     Text(
-                                                      'WhatsApp: ',
+                                                      'IGREJA: ',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyText1
@@ -629,43 +597,7 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                             fontFamily:
                                                                 'OpensSans',
                                                             color: Colors.white,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                    AutoSizeText(
-                                                      '11 97101-5276',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Color(
-                                                                    0xFFD4D4D4),
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Text(
-                                                      'Igreja: ',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'OpensSans',
-                                                            color: Colors.white,
+                                                            fontSize: 16,
                                                             useGoogleFonts:
                                                                 false,
                                                           ),
@@ -679,21 +611,20 @@ class _ItinerarioPastoralWidgetState extends State<ItinerarioPastoralWidget> {
                                                         maxChars: 20,
                                                         replacement: '…',
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Color(
-                                                                    0xFFD5B57B),
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyText1
+                                                          .override(
+                                                            fontFamily:
+                                                                'OpensSans',
+                                                            color: Color(
+                                                                0xFFD5B57B),
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            useGoogleFonts:
+                                                                false,
+                                                          ),
                                                     ),
                                                   ],
                                                 ),

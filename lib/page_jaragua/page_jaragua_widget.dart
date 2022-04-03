@@ -368,7 +368,15 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                       ),
                       InkWell(
                         onTap: () async {
-                          Navigator.pop(context);
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.bottomToTop,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child: ItinerarioPastoralWidget(),
+                            ),
+                          );
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width,
