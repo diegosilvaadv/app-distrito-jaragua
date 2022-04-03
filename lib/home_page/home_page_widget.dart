@@ -243,9 +243,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     await showModalBottomSheet(
                                                       isScrollControlled: true,
                                                       backgroundColor:
-                                                          Color(0x31000000),
+                                                          Color(0x66000000),
                                                       barrierColor:
-                                                          Color(0x33000000),
+                                                          Color(0x66000000),
                                                       context: context,
                                                       builder: (context) {
                                                         return Padding(
