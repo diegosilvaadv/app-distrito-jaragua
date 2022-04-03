@@ -1,3 +1,4 @@
+import '../esc_musica_jaragua/esc_musica_jaragua_widget.dart';
 import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
 import '../esc_sonoplastia_jaragua/esc_sonoplastia_jaragua_widget.dart';
 import '../flutter_flow/flutter_flow_expanded_image_view.dart';
@@ -300,8 +301,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           await Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  EscPregadoresJaraguaWidget(),
+                              builder: (context) => EscMusicaJaraguaWidget(),
                             ),
                           );
                         },

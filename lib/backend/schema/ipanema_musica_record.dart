@@ -24,10 +24,10 @@ abstract class IpanemaMusicaRecord
   String get igreja;
 
   @nullable
-  String get whatsapp;
+  String get img;
 
   @nullable
-  String get img;
+  String get whatsapp;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -37,8 +37,8 @@ abstract class IpanemaMusicaRecord
     ..nome = ''
     ..ativo = false
     ..igreja = ''
-    ..whatsapp = ''
-    ..img = '';
+    ..img = ''
+    ..whatsapp = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('ipanema_musica');
@@ -67,8 +67,8 @@ Map<String, dynamic> createIpanemaMusicaRecordData({
   DateTime data,
   bool ativo,
   String igreja,
-  String whatsapp,
   String img,
+  String whatsapp,
 }) =>
     serializers.toFirestore(
         IpanemaMusicaRecord.serializer,
@@ -77,5 +77,5 @@ Map<String, dynamic> createIpanemaMusicaRecordData({
           ..data = data
           ..ativo = ativo
           ..igreja = igreja
-          ..whatsapp = whatsapp
-          ..img = img));
+          ..img = img
+          ..whatsapp = whatsapp));
