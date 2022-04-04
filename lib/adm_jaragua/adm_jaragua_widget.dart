@@ -82,8 +82,8 @@ class _AdmJaraguaWidgetState extends State<AdmJaraguaWidget> {
                             onTap: () async {
                               await showModalBottomSheet(
                                 isScrollControlled: true,
-                                backgroundColor: Color(0x66000000),
-                                barrierColor: Color(0x6E000000),
+                                backgroundColor: Colors.black,
+                                barrierColor: Color(0x4E000000),
                                 context: context,
                                 builder: (context) {
                                   return Padding(
