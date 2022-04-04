@@ -43,8 +43,8 @@ class _AdmPregadoresJaraguaWidgetState
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(10, 25, 10, 10),
-      child: StreamBuilder<List<JaraguaPregadoresRecord>>(
-        stream: queryJaraguaPregadoresRecord(
+      child: FutureBuilder<List<JaraguaPregadoresRecord>>(
+        future: queryJaraguaPregadoresRecordOnce(
           singleRecord: true,
         ),
         builder: (context, snapshot) {
@@ -383,7 +383,7 @@ class _AdmPregadoresJaraguaWidgetState
                             data: calendarSelectedDay.start,
                             igreja: textController2.text,
                             whatsapp: textController3.text,
-                            img: columnJaraguaPregadoresRecord.img,
+                            img: uploadedFileUrl,
                             ativo: true,
                           );
                           await JaraguaPregadoresRecord.collection
