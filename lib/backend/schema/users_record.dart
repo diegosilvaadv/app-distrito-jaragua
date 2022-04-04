@@ -35,8 +35,20 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   String get igreja;
 
   @nullable
-  @BuiltValueField(wireName: 'adm_view')
-  bool get admView;
+  @BuiltValueField(wireName: 'adm_jaragua')
+  bool get admJaragua;
+
+  @nullable
+  @BuiltValueField(wireName: 'adm_ipanema')
+  bool get admIpanema;
+
+  @nullable
+  @BuiltValueField(wireName: 'adm_panamericano')
+  bool get admPanamericano;
+
+  @nullable
+  @BuiltValueField(wireName: 'adm_aurora')
+  bool get admAurora;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -49,7 +61,10 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..uid = ''
     ..phoneNumber = ''
     ..igreja = ''
-    ..admView = false;
+    ..admJaragua = false
+    ..admIpanema = false
+    ..admPanamericano = false
+    ..admAurora = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -80,7 +95,10 @@ Map<String, dynamic> createUsersRecordData({
   DateTime createdTime,
   String phoneNumber,
   String igreja,
-  bool admView,
+  bool admJaragua,
+  bool admIpanema,
+  bool admPanamericano,
+  bool admAurora,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
@@ -92,4 +110,7 @@ Map<String, dynamic> createUsersRecordData({
           ..createdTime = createdTime
           ..phoneNumber = phoneNumber
           ..igreja = igreja
-          ..admView = admView));
+          ..admJaragua = admJaragua
+          ..admIpanema = admIpanema
+          ..admPanamericano = admPanamericano
+          ..admAurora = admAurora));

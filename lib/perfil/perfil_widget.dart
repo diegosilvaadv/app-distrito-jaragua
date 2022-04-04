@@ -1,3 +1,4 @@
+import '../adm_jaragua/adm_jaragua_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -23,104 +24,6 @@ class _PerfilWidgetState extends State<PerfilWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-      drawer: Drawer(
-        elevation: 16,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  width: 304,
-                  height: 180,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF4B39EF),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Align(
-                                alignment: AlignmentDirectional(-0.7, 0),
-                                child: Container(
-                                  width: 80,
-                                  height: 80,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/images/UI_avatar@2x.png',
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.7, 0),
-                                  child: Icon(
-                                    Icons.edit_rounded,
-                                    color: Colors.white,
-                                    size: 24,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                '[User Name]',
-                                style: FlutterFlowTheme.of(context)
-                                    .title3
-                                    .override(
-                                      fontFamily: 'Lexend Deca',
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                '[username@domain.com]',
-                                style: FlutterFlowTheme.of(context)
-                                    .subtitle2
-                                    .override(
-                                      fontFamily: 'Lexend Deca',
-                                      color: Color(0xFFEE8B60),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
       body: StreamBuilder<UsersRecord>(
         stream: UsersRecord.getDocument(currentUserReference),
         builder: (context, snapshot) {
@@ -266,7 +169,6 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                 ),
                 ListView(
                   padding: EdgeInsets.zero,
-                  primary: false,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   children: [
@@ -611,22 +513,27 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ],
                   ),
                 ),
-                if ((columnUsersRecord.admView) == true)
+                if ((columnUsersRecord.admJaragua) == true)
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 20),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AdmJaraguaWidget(),
+                              ),
+                            );
                           },
-                          text: 'Administradores',
+                          text: 'ADM JARAGUÁ',
                           options: FFButtonOptions(
                             width: 150,
                             height: 40,
-                            color: Color(0xFFE10D0D),
+                            color: FlutterFlowTheme.of(context).primaryColor,
                             textStyle:
                                 FlutterFlowTheme.of(context).bodyText2.override(
                                       fontFamily: 'Lexend Deca',
@@ -645,6 +552,111 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                       ],
                     ),
                   ),
+                if ((columnUsersRecord.admIpanema) == true)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'ADM JD. IPANEMA',
+                          options: FFButtonOptions(
+                            width: 150,
+                            height: 40,
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyText2.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                if ((columnUsersRecord.admPanamericano) == true)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'ADM JD. IPAN',
+                          options: FFButtonOptions(
+                            width: 150,
+                            height: 40,
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyText2.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                if ((columnUsersRecord.admAurora) == true)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 50),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'ADM AURORA',
+                          options: FFButtonOptions(
+                            width: 150,
+                            height: 40,
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyText2.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                Divider(
+                  height: 50,
+                ),
               ],
             ),
           );
