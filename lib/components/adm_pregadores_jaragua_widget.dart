@@ -118,7 +118,7 @@ class _AdmPregadoresJaraguaWidgetState
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(100),
                           child: Image.network(
-                            columnJaraguaPregadoresRecord.img,
+                            'https://cdn-icons-png.flaticon.com/512/685/685685.png',
                             width: 100,
                             height: 100,
                             fit: BoxFit.cover,
