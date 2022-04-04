@@ -54,7 +54,12 @@ class _AdmJaraguaWidgetState extends State<AdmJaraguaWidget> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [],
+              ),
+            ],
           ),
         ),
       ),
