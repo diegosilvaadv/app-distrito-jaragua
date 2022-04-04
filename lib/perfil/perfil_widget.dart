@@ -609,7 +609,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: 'ADM JD. IPAN',
+                            text: 'ADM JD. PAN',
                             options: FFButtonOptions(
                               width: 150,
                               height: 40,
