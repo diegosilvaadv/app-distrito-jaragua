@@ -82,8 +82,8 @@ class _AdmJaraguaWidgetState extends State<AdmJaraguaWidget> {
                             onTap: () async {
                               await showModalBottomSheet(
                                 isScrollControlled: true,
-                                backgroundColor:
-                                    FlutterFlowTheme.of(context).primaryText,
+                                backgroundColor: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
                                 barrierColor: Color(0x4E000000),
                                 context: context,
                                 builder: (context) {

@@ -84,16 +84,21 @@ class _AdmPregadoresJaraguaWidgetState
                     children: [
                       InkWell(
                         onTap: () async {
-                          final selectedFile =
-                              await selectFile(allowedExtensions: ['pdf']);
-                          if (selectedFile != null) {
+                          final selectedMedia = await selectMedia(
+                            maxWidth: 1000.00,
+                            maxHeight: 1000.00,
+                            mediaSource: MediaSource.photoGallery,
+                          );
+                          if (selectedMedia != null &&
+                              validateFileFormat(
+                                  selectedMedia.storagePath, context)) {
                             showUploadMessage(
                               context,
                               'Uploading file...',
                               showLoading: true,
                             );
                             final downloadUrl = await uploadData(
-                                selectedFile.storagePath, selectedFile.bytes);
+                                selectedMedia.storagePath, selectedMedia.bytes);
                             ScaffoldMessenger.of(context).hideCurrentSnackBar();
                             if (downloadUrl != null) {
                               setState(() => uploadedFileUrl = downloadUrl);
@@ -104,7 +109,7 @@ class _AdmPregadoresJaraguaWidgetState
                             } else {
                               showUploadMessage(
                                 context,
-                                'Failed to upload file',
+                                'Failed to upload media',
                               );
                               return;
                             }
@@ -378,7 +383,7 @@ class _AdmPregadoresJaraguaWidgetState
                             data: calendarSelectedDay.start,
                             igreja: textController2.text,
                             whatsapp: textController3.text,
-                            img: uploadedFileUrl,
+                            img: columnJaraguaPregadoresRecord.img,
                             ativo: true,
                           );
                           await JaraguaPregadoresRecord.collection
