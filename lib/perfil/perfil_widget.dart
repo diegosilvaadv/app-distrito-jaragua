@@ -25,7 +25,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
         child: StreamBuilder<UsersRecord>(
           stream: UsersRecord.getDocument(currentUserReference),
           builder: (context, snapshot) {
@@ -669,7 +669,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                       ),
                     ),
                   Divider(
-                    height: 150,
+                    height: 100,
                   ),
                 ],
               ),
