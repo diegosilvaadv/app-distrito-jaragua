@@ -1,10 +1,13 @@
 import '../adm_jaragua/adm_jaragua_widget.dart';
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../backend/firebase_storage/storage.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../flutter_flow/upload_media.dart';
 import '../loginpage/loginpage_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +20,7 @@ class PerfilWidget extends StatefulWidget {
 }
 
 class _PerfilWidgetState extends State<PerfilWidget> {
+  String uploadedFileUrl = '';
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -51,7 +55,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     children: [
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 270,
+                        height: 300,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -81,17 +85,60 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0, 105, 0, 0),
-                                          child: Container(
-                                            width: 80,
-                                            height: 80,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              valueOrDefault<String>(
-                                                columnUsersRecord.photoUrl,
-                                                'https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/3/f/4/7/3f4782a691f4b5986ea9f9697010a16d.jpg',
+                                          child: InkWell(
+                                            onTap: () async {
+                                              final selectedMedia =
+                                                  await selectMedia(
+                                                maxWidth: 1000.00,
+                                                maxHeight: 1000.00,
+                                                mediaSource:
+                                                    MediaSource.photoGallery,
+                                              );
+                                              if (selectedMedia != null &&
+                                                  validateFileFormat(
+                                                      selectedMedia.storagePath,
+                                                      context)) {
+                                                showUploadMessage(
+                                                  context,
+                                                  'Uploading file...',
+                                                  showLoading: true,
+                                                );
+                                                final downloadUrl =
+                                                    await uploadData(
+                                                        selectedMedia
+                                                            .storagePath,
+                                                        selectedMedia.bytes);
+                                                ScaffoldMessenger.of(context)
+                                                    .hideCurrentSnackBar();
+                                                if (downloadUrl != null) {
+                                                  setState(() =>
+                                                      uploadedFileUrl =
+                                                          downloadUrl);
+                                                  showUploadMessage(
+                                                    context,
+                                                    'Success!',
+                                                  );
+                                                } else {
+                                                  showUploadMessage(
+                                                    context,
+                                                    'Failed to upload media',
+                                                  );
+                                                  return;
+                                                }
+                                              }
+                                            },
+                                            child: Container(
+                                              width: 80,
+                                              height: 80,
+                                              clipBehavior: Clip.antiAlias,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                              ),
+                                              child: Image.network(
+                                                valueOrDefault<String>(
+                                                  columnUsersRecord.photoUrl,
+                                                  'https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/3/f/4/7/3f4782a691f4b5986ea9f9697010a16d.jpg',
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -145,6 +192,41 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                           fontSize: 14,
                                           fontWeight: FontWeight.normal,
                                         ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                FFButtonWidget(
+                                  onPressed: () async {
+                                    final usersUpdateData =
+                                        createUsersRecordData(
+                                      photoUrl: uploadedFileUrl,
+                                    );
+                                    await columnUsersRecord.reference
+                                        .update(usersUpdateData);
+                                  },
+                                  text: 'Salvar',
+                                  options: FFButtonOptions(
+                                    width: 130,
+                                    height: 40,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'OpensSans',
+                                          color: Colors.white,
+                                          useGoogleFonts: false,
+                                        ),
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
+                                    ),
+                                    borderRadius: 12,
                                   ),
                                 ),
                               ],
