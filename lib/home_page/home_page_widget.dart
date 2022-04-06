@@ -270,6 +270,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               descricao:
                                                                   listViewAnunciosDistritalRecord
                                                                       .descricao,
+                                                              horario: dateTimeFormat(
+                                                                  'Hm',
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .data),
+                                                              local:
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .local,
+                                                              data:
+                                                                  listViewAnunciosDistritalRecord
+                                                                      .data,
                                                             ),
                                                           ),
                                                         );

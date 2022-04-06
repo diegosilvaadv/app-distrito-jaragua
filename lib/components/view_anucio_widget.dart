@@ -20,7 +20,7 @@ class ViewAnucioWidget extends StatefulWidget {
   final String descricao;
   final String horario;
   final String local;
-  final DateTimeRange data;
+  final DateTime data;
 
   @override
   _ViewAnucioWidgetState createState() => _ViewAnucioWidgetState();
@@ -125,7 +125,7 @@ class _ViewAnucioWidgetState extends State<ViewAnucioWidget> {
                     ),
                     Text(
                       valueOrDefault<String>(
-                        dateTimeFormat('d/M/y', widget.data.start),
+                        dateTimeFormat('d/M/y', widget.data),
                         'Sem Data',
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
