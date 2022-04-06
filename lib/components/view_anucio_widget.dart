@@ -1,8 +1,10 @@
+import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class ViewAnucioWidget extends StatefulWidget {
   const ViewAnucioWidget({
@@ -50,16 +52,48 @@ class _ViewAnucioWidgetState extends State<ViewAnucioWidget> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.network(
-                  valueOrDefault<String>(
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      child: FlutterFlowExpandedImageView(
+                        image: Image.network(
+                          valueOrDefault<String>(
+                            widget.img,
+                            'https://picsum.photos/seed/277/600',
+                          ),
+                          fit: BoxFit.contain,
+                        ),
+                        allowRotation: false,
+                        tag: valueOrDefault<String>(
+                          widget.img,
+                          'https://picsum.photos/seed/277/600',
+                        ),
+                        useHeroAnimation: true,
+                      ),
+                    ),
+                  );
+                },
+                child: Hero(
+                  tag: valueOrDefault<String>(
                     widget.img,
                     'https://picsum.photos/seed/277/600',
                   ),
-                  width: 370,
-                  height: 370,
-                  fit: BoxFit.cover,
+                  transitionOnUserGestures: true,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                      valueOrDefault<String>(
+                        widget.img,
+                        'https://picsum.photos/seed/277/600',
+                      ),
+                      width: 370,
+                      height: 370,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
               Padding(
