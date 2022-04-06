@@ -198,7 +198,8 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                       children: [
                                         Icon(
                                           Icons.people_sharp,
-                                          color: Colors.black,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
                                           size: 50,
                                         ),
                                       ],
@@ -265,7 +266,8 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                       children: [
                                         Icon(
                                           Icons.mouse,
-                                          color: Colors.black,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
                                           size: 50,
                                         ),
                                       ],
@@ -337,7 +339,8 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                       children: [
                                         Icon(
                                           Icons.mic_external_on,
-                                          color: Colors.black,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
                                           size: 50,
                                         ),
                                       ],
@@ -411,7 +414,8 @@ class _PageJdPanamericanoWidgetState extends State<PageJdPanamericanoWidget> {
                                       children: [
                                         Icon(
                                           Icons.person_search_sharp,
-                                          color: Colors.black,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
                                           size: 50,
                                         ),
                                       ],
