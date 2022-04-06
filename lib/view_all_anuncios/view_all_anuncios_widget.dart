@@ -128,15 +128,19 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(5, 5, 5, 5),
-                                                child: Image.network(
-                                                  valueOrDefault<String>(
-                                                    columnAnunciosDistritalRecord
-                                                        .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child: Image.network(
+                                                    valueOrDefault<String>(
+                                                      columnAnunciosDistritalRecord
+                                                          .img,
+                                                      'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                    ),
+                                                    width: 150,
+                                                    height: 150,
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  width: 100,
-                                                  height: 100,
-                                                  fit: BoxFit.cover,
                                                 ),
                                               ),
                                               Expanded(
@@ -187,30 +191,32 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                           mainAxisSize:
                                                               MainAxisSize.max,
                                                           children: [
-                                                            Text(
-                                                              valueOrDefault<
-                                                                  String>(
-                                                                columnAnunciosDistritalRecord
-                                                                    .descricao,
-                                                                'Sem Descrição',
+                                                            Expanded(
+                                                              child: Text(
+                                                                valueOrDefault<
+                                                                    String>(
+                                                                  columnAnunciosDistritalRecord
+                                                                      .descricao,
+                                                                  'Sem Descrição',
+                                                                ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'OpensSans',
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                      fontStyle:
+                                                                          FontStyle
+                                                                              .italic,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
                                                               ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyText1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'OpensSans',
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .normal,
-                                                                    fontStyle:
-                                                                        FontStyle
-                                                                            .italic,
-                                                                    useGoogleFonts:
-                                                                        false,
-                                                                  ),
                                                             ),
                                                           ],
                                                         ),
@@ -310,30 +316,29 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                                       false,
                                                                 ),
                                                           ),
-                                                          Text(
-                                                            valueOrDefault<
-                                                                String>(
-                                                              columnAnunciosDistritalRecord
-                                                                  .local,
-                                                              'S/ Igreja',
-                                                            ).maybeHandleOverflow(
-                                                              maxChars: 20,
-                                                              replacement: '…',
+                                                          Expanded(
+                                                            child: AutoSizeText(
+                                                              valueOrDefault<
+                                                                  String>(
+                                                                columnAnunciosDistritalRecord
+                                                                    .local,
+                                                                'S/ Igreja',
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyText1
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'OpensSans',
+                                                                    color: Color(
+                                                                        0xFFDBDBDB),
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal,
+                                                                    useGoogleFonts:
+                                                                        false,
+                                                                  ),
                                                             ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyText1
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'OpensSans',
-                                                                  color: Color(
-                                                                      0xFFDBDBDB),
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .normal,
-                                                                  useGoogleFonts:
-                                                                      false,
-                                                                ),
                                                           ),
                                                         ],
                                                       ),
@@ -385,7 +390,7 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                     stream: queryAnunciosDistritalRecord(
                       queryBuilder: (anunciosDistritalRecord) =>
                           anunciosDistritalRecord.where('ativo',
-                              isEqualTo: true),
+                              isEqualTo: false),
                     ),
                     builder: (context, snapshot) {
                       // Customize what your widget looks like when it's loading.
@@ -426,15 +431,19 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     5, 5, 5, 5),
-                                            child: Image.network(
-                                              valueOrDefault<String>(
-                                                columnAnunciosDistritalRecord
-                                                    .img,
-                                                'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              child: Image.network(
+                                                valueOrDefault<String>(
+                                                  columnAnunciosDistritalRecord
+                                                      .img,
+                                                  'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                ),
+                                                width: 150,
+                                                height: 150,
+                                                fit: BoxFit.cover,
                                               ),
-                                              width: 100,
-                                              height: 100,
-                                              fit: BoxFit.cover,
                                             ),
                                           ),
                                           Expanded(
@@ -482,30 +491,32 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
-                                                        Text(
-                                                          valueOrDefault<
-                                                              String>(
-                                                            columnAnunciosDistritalRecord
-                                                                .descricao,
-                                                            'Sem Descrição',
+                                                        Expanded(
+                                                          child: Text(
+                                                            valueOrDefault<
+                                                                String>(
+                                                              columnAnunciosDistritalRecord
+                                                                  .descricao,
+                                                              'Sem Descrição',
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'OpensSans',
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
+                                                                  fontStyle:
+                                                                      FontStyle
+                                                                          .italic,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                           ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'OpensSans',
-                                                                color: Colors
-                                                                    .white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                fontStyle:
-                                                                    FontStyle
-                                                                        .italic,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
                                                         ),
                                                       ],
                                                     ),
@@ -602,30 +613,29 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                                   false,
                                                             ),
                                                       ),
-                                                      Text(
-                                                        valueOrDefault<String>(
-                                                          columnAnunciosDistritalRecord
-                                                              .local,
-                                                          'S/ Igreja',
-                                                        ).maybeHandleOverflow(
-                                                          maxChars: 20,
-                                                          replacement: '…',
+                                                      Expanded(
+                                                        child: Text(
+                                                          valueOrDefault<
+                                                              String>(
+                                                            columnAnunciosDistritalRecord
+                                                                .local,
+                                                            'S/ Igreja',
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'OpensSans',
+                                                                color: Color(
+                                                                    0xFFDBDBDB),
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                         ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyText1
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'OpensSans',
-                                                                  color: Color(
-                                                                      0xFFDBDBDB),
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .normal,
-                                                                  useGoogleFonts:
-                                                                      false,
-                                                                ),
                                                       ),
                                                     ],
                                                   ),
