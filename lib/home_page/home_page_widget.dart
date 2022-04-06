@@ -304,7 +304,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   },
                                                   child: Container(
                                                     width: 160,
-                                                    height: 220,
+                                                    height: double.infinity,
                                                     decoration: BoxDecoration(
                                                       color:
                                                           FlutterFlowTheme.of(
@@ -380,7 +380,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .titulo
                                                                         .maybeHandleOverflow(
                                                                       maxChars:
-                                                                          20,
+                                                                          25,
                                                                       replacement:
                                                                           '…',
                                                                     ),
