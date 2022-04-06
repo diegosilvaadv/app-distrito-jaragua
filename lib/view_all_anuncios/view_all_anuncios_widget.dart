@@ -1,10 +1,12 @@
 import '../backend/backend.dart';
+import '../flutter_flow/flutter_flow_expanded_image_view.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class ViewAllAnunciosWidget extends StatefulWidget {
   const ViewAllAnunciosWidget({Key key}) : super(key: key);
@@ -128,25 +130,69 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(5, 5, 5, 5),
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                  child: Image.network(
-                                                    valueOrDefault<String>(
+                                                child: InkWell(
+                                                  onTap: () async {
+                                                    await Navigator.push(
+                                                      context,
+                                                      PageTransition(
+                                                        type: PageTransitionType
+                                                            .fade,
+                                                        child:
+                                                            FlutterFlowExpandedImageView(
+                                                          image: Image.network(
+                                                            valueOrDefault<
+                                                                String>(
+                                                              columnAnunciosDistritalRecord
+                                                                  .img,
+                                                              'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                            ),
+                                                            fit: BoxFit.contain,
+                                                          ),
+                                                          allowRotation: false,
+                                                          tag: valueOrDefault<
+                                                              String>(
+                                                            columnAnunciosDistritalRecord
+                                                                .img,
+                                                            'https://cdn-icons-png.flaticon.com/512/4064/4064205.png' +
+                                                                '$columnIndex',
+                                                          ),
+                                                          useHeroAnimation:
+                                                              true,
+                                                        ),
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: Hero(
+                                                    tag: valueOrDefault<String>(
                                                       columnAnunciosDistritalRecord
                                                           .img,
-                                                      'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                      'https://cdn-icons-png.flaticon.com/512/4064/4064205.png' +
+                                                          '$columnIndex',
                                                     ),
-                                                    width: 150,
-                                                    height: 150,
-                                                    fit: BoxFit.cover,
+                                                    transitionOnUserGestures:
+                                                        true,
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
+                                                      child: Image.network(
+                                                        valueOrDefault<String>(
+                                                          columnAnunciosDistritalRecord
+                                                              .img,
+                                                          'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                        ),
+                                                        width: 150,
+                                                        height: 150,
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
                                               Expanded(
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(5, 0, 0, 0),
+                                                      .fromSTEB(5, 10, 0, 0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -431,18 +477,58 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     5, 5, 5, 5),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              child: Image.network(
-                                                valueOrDefault<String>(
+                                            child: InkWell(
+                                              onTap: () async {
+                                                await Navigator.push(
+                                                  context,
+                                                  PageTransition(
+                                                    type:
+                                                        PageTransitionType.fade,
+                                                    child:
+                                                        FlutterFlowExpandedImageView(
+                                                      image: Image.network(
+                                                        valueOrDefault<String>(
+                                                          columnAnunciosDistritalRecord
+                                                              .img,
+                                                          'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                        ),
+                                                        fit: BoxFit.contain,
+                                                      ),
+                                                      allowRotation: false,
+                                                      tag: valueOrDefault<
+                                                          String>(
+                                                        columnAnunciosDistritalRecord
+                                                            .img,
+                                                        'https://cdn-icons-png.flaticon.com/512/4064/4064205.png' +
+                                                            '$columnIndex',
+                                                      ),
+                                                      useHeroAnimation: true,
+                                                    ),
+                                                  ),
+                                                );
+                                              },
+                                              child: Hero(
+                                                tag: valueOrDefault<String>(
                                                   columnAnunciosDistritalRecord
                                                       .img,
-                                                  'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                  'https://cdn-icons-png.flaticon.com/512/4064/4064205.png' +
+                                                      '$columnIndex',
                                                 ),
-                                                width: 150,
-                                                height: 150,
-                                                fit: BoxFit.cover,
+                                                transitionOnUserGestures: true,
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child: Image.network(
+                                                    valueOrDefault<String>(
+                                                      columnAnunciosDistritalRecord
+                                                          .img,
+                                                      'https://cdn-icons-png.flaticon.com/512/4064/4064205.png',
+                                                    ),
+                                                    width: 150,
+                                                    height: 150,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
