@@ -88,11 +88,11 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                           child: InkWell(
                                             onTap: () async {
                                               final selectedMedia =
-                                                  await selectMedia(
+                                                  await selectMediaWithSourceBottomSheet(
+                                                context: context,
                                                 maxWidth: 1000.00,
                                                 maxHeight: 1000.00,
-                                                mediaSource:
-                                                    MediaSource.photoGallery,
+                                                allowPhoto: true,
                                               );
                                               if (selectedMedia != null &&
                                                   validateFileFormat(

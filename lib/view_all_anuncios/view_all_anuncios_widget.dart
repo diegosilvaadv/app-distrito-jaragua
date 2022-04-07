@@ -349,7 +349,7 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                             MainAxisSize.max,
                                                         crossAxisAlignment:
                                                             CrossAxisAlignment
-                                                                .end,
+                                                                .start,
                                                         children: [
                                                           Text(
                                                             'LOCAL: ',
@@ -687,6 +687,9 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                   Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
                                                     children: [
                                                       Text(
                                                         'LOCAL: ',

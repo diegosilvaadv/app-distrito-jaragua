@@ -85,8 +85,6 @@ class _AdmPregadoresJaraguaWidgetState
                       InkWell(
                         onTap: () async {
                           final selectedMedia = await selectMedia(
-                            maxWidth: 1000.00,
-                            maxHeight: 1000.00,
                             mediaSource: MediaSource.photoGallery,
                           );
                           if (selectedMedia != null &&
