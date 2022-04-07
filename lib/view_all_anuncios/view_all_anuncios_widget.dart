@@ -192,7 +192,7 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                               Expanded(
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(5, 10, 0, 0),
+                                                      .fromSTEB(5, 15, 0, 0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -347,6 +347,9 @@ class _ViewAllAnunciosWidgetState extends State<ViewAllAnunciosWidget> {
                                                       Row(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .end,
                                                         children: [
                                                           Text(
                                                             'LOCAL: ',
