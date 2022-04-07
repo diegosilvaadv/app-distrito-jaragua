@@ -3,7 +3,6 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../main.dart';
-import '../smspho/smspho_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +23,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
   TextEditingController loginEmailAddressController;
   TextEditingController loginPasswordController;
   bool loginPasswordVisibility;
-  TextEditingController textController1;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -39,7 +37,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
     loginEmailAddressController = TextEditingController();
     loginPasswordController = TextEditingController();
     loginPasswordVisibility = false;
-    textController1 = TextEditingController();
   }
 
   @override
@@ -393,94 +390,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                       ),
                                       borderRadius: 0,
                                     ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 10, 0, 0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Expanded(
-                                        child: TextFormField(
-                                          controller: textController1,
-                                          obscureText: false,
-                                          decoration: InputDecoration(
-                                            hintText: '[Some hint text...]',
-                                            enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 10, 0, 0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      InkWell(
-                                        onTap: () async {
-                                          if (textController1.text.isEmpty ||
-                                              !textController1.text
-                                                  .startsWith('+')) {
-                                            ScaffoldMessenger.of(context)
-                                                .showSnackBar(
-                                              SnackBar(
-                                                content: Text(
-                                                    'Phone Number is required and has to start with +.'),
-                                              ),
-                                            );
-                                            return;
-                                          }
-                                          await beginPhoneAuth(
-                                            context: context,
-                                            phoneNumber: textController1.text,
-                                            onCodeSent: () async {
-                                              await Navigator
-                                                  .pushAndRemoveUntil(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      SmsphoWidget(),
-                                                ),
-                                                (r) => false,
-                                              );
-                                            },
-                                          );
-                                        },
-                                        child: Icon(
-                                          Icons.phone,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          size: 24,
-                                        ),
-                                      ),
-                                    ],
                                   ),
                                 ),
                               ],

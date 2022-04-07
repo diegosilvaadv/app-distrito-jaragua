@@ -90,22 +90,7 @@ class _SmsphoWidgetState extends State<SmsphoWidget> {
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
-                      if (textController.text.isEmpty) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text('Enter SMS verification code.'),
-                          ),
-                        );
-                        return;
-                      }
-                      final phoneVerifiedUser = await verifySmsCode(
-                        context: context,
-                        smsCode: textController.text,
-                      );
-                      if (phoneVerifiedUser == null) {
-                        return;
-                      }
-
+                      await sendEmailVerification();
                       await Navigator.push(
                         context,
                         MaterialPageRoute(
