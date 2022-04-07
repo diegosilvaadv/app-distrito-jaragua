@@ -1,21 +1,20 @@
 {
   "project_info": {
-    "project_number": "322146099602",
-    "firebase_url": "https://iasd-vila-aurora-7-default-rtdb.firebaseio.com",
-    "project_id": "iasd-vila-aurora-7",
-    "storage_bucket": "iasd-vila-aurora-7.appspot.com"
+    "project_number": "276236262529",
+    "project_id": "distrito-jaragua",
+    "storage_bucket": "distrito-jaragua.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:322146099602:android:faac06a3cb293fbba8e14b",
+        "mobilesdk_app_id": "1:276236262529:android:7a72d979fd9a798660c180",
         "android_client_info": {
           "package_name": "com.flutterscreens.appdistritojaragua"
         }
       },
       "oauth_client": [
         {
-          "client_id": "322146099602-j6js85vbn8be189rr6tm6om6hoai8k05.apps.googleusercontent.com",
+          "client_id": "276236262529-9lqb5uknnih4v7tvgttiod773i7158uj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.flutterscreens.appdistritojaragua",
@@ -23,27 +22,27 @@
           }
         },
         {
-          "client_id": "322146099602-1fdptgidr3tr0f7j30bmdsmeb533o8dl.apps.googleusercontent.com",
+          "client_id": "276236262529-r59udhmqpc53ectnss3vbm30ac8ch9m1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCpc1zdDcMglwhsQCVZCYlglMmAAtPqaW8"
+          "current_key": "AIzaSyAnTqP4jfAAXiZFrk7hv_w8CSF5_ZzoWBU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "322146099602-1fdptgidr3tr0f7j30bmdsmeb533o8dl.apps.googleusercontent.com",
+              "client_id": "276236262529-r59udhmqpc53ectnss3vbm30ac8ch9m1.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "322146099602-1m1uo2d5hd9hftiqtr78qhtekca6gthf.apps.googleusercontent.com",
+              "client_id": "276236262529-vopbk1o0o6vjrae2kmft6jpb0ljkvc5b.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.adv7dev.iasdvilaaurora"
+                "bundle_id": "com.flutterscreens.appdistritojaragua"
               }
             }
           ]

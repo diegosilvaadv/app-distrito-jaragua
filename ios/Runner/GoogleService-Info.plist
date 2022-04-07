@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>322146099602-tgvpks2buhd1m6jvfh4qr0b8ibufvb4n.apps.googleusercontent.com</string>
+	<string>276236262529-vopbk1o0o6vjrae2kmft6jpb0ljkvc5b.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.322146099602-tgvpks2buhd1m6jvfh4qr0b8ibufvb4n</string>
+	<string>com.googleusercontent.apps.276236262529-vopbk1o0o6vjrae2kmft6jpb0ljkvc5b</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>322146099602-j6js85vbn8be189rr6tm6om6hoai8k05.apps.googleusercontent.com</string>
+	<string>276236262529-9lqb5uknnih4v7tvgttiod773i7158uj.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBSdnzcIrXHmqjckW5sgdDRRh02JENojxE</string>
+	<string>AIzaSyD61ZyAHNBx-tfT-VfFHA58g9dI_YIyer0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>322146099602</string>
+	<string>276236262529</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.flutterscreens.appdistritojaragua</string>
 	<key>PROJECT_ID</key>
-	<string>iasd-vila-aurora-7</string>
+	<string>distrito-jaragua</string>
 	<key>STORAGE_BUCKET</key>
-	<string>iasd-vila-aurora-7.appspot.com</string>
+	<string>distrito-jaragua.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:322146099602:ios:cc0e9eab08aea68da8e14b</string>
-	<key>DATABASE_URL</key>
-	<string>https://iasd-vila-aurora-7-default-rtdb.firebaseio.com</string>
+	<string>1:276236262529:ios:8b2b5ee20a21320360c180</string>
 </dict>
 </plist>
